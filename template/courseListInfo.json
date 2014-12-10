@@ -1,0 +1,115 @@
+{
+	"resultCode": 0,
+	"resultMsg": "调用成功",
+	"result": [{
+		"year": "2014",
+		"courses": [{
+			"courseId": 1,
+			"courseName": "A复训课程",
+			"courseType": "A复训",
+			"actype": "ER190",
+			"courseYear": "2014年",
+			"courseYearperiod": "下半年",
+			"courseHours": 3,
+			"skilledLevel": "机长",
+			"skilledExamRef": "A近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:10"
+		}, {
+			"courseId": 2,
+			"courseName": "B复训课程",
+			"courseType": "B复训",
+			"actype": "ER190",
+			"courseYear": "2014年",
+			"courseYearperiod": "下半年",
+			"courseHours": 2,
+			"skilledLevel": "副驾驶",
+			"skilledExamRef": "B近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:11"
+		}, {
+			"courseId": 3,
+			"courseName": "C复训课程",
+			"courseType": "C复训",
+			"actype": "ER190",
+			"courseYear": "2014年",
+			"courseYearperiod": "上半年",
+			"courseHours": 4,
+			"skilledLevel": "机长",
+			"skilledExamRef": "C近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:12"
+		}, {
+			"courseId": 4,
+			"courseName": "D复训课程",
+			"courseType": "D复训",
+			"actype": "ER190",
+			"courseYear": "2014年",
+			"courseYearperiod": "上半年",
+			"courseHours": 3,
+			"skilledLevel": "副驾驶",
+			"skilledExamRef": "D近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:13"
+		}]
+	}, {
+		"year": "2013",
+		"courses": [{
+			"courseId": 5,
+			"courseName": "E复训课程",
+			"courseType": "E复训",
+			"actype": "ER190",
+			"courseYear": "2013年",
+			"courseYearperiod": "下半年",
+			"courseHours": 3,
+			"skilledLevel": "机长",
+			"skilledExamRef": "E近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:10"
+		}, {
+			"courseId": 6,
+			"courseName": "F复训课程",
+			"courseType": "F复训",
+			"actype": "ER190",
+			"courseYear": "2013年",
+			"courseYearperiod": "下半年",
+			"courseHours": 3,
+			"skilledLevel": "副驾驶",
+			"skilledExamRef": "F近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:11"
+		}, {
+			"courseId": 7,
+			"courseName": "G复训课程",
+			"courseType": "G复训",
+			"actype": "ER190",
+			"courseYear": "2013年",
+			"courseYearperiod": "上半年",
+			"courseHours": 3,
+			"skilledLevel": "机长",
+			"skilledExamRef": "G近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:12"
+		}, {
+			"courseId": 8,
+			"courseName": "H复训课程",
+			"courseType": "H复训",
+			"actype": "ER190",
+			"courseYear": "2013年",
+			"courseYearperiod": "上半年",
+			"courseHours": 3,
+			"skilledLevel": "副驾驶",
+			"skilledExamRef": "H近期经历",
+			"referMaterial": "《民航局相关规定》\r\n《海航相关规定》\r\n《本机型使用文档》",
+			"companyNodeId": 111,
+			"publishTime": "2014-07-21 11:28:13"
+		}]
+	}]
+}

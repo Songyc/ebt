@@ -1,0 +1,125 @@
+<style type="text/css" media="all">
+/*put your style here*/
+.content>div{
+	height:auto;
+}
+.leftTop{
+	left: 0 !important;
+	padding: 0 24px;
+}
+.leftTop img{
+	margin-top: 18px !important;
+}
+h1{
+	font-weight: normal !important;
+}
+.checkUpdate{
+	margin: 135px 225px 0 225px;
+	width: auto;
+	height:44px !important;
+	position: relative;
+	background-color: #29A7E1;
+	border-radius: 10px;
+	line-height: 44px;
+}
+.checkTitle{
+	position: absolute;
+	left:25px;
+	top:0;
+}
+.newVersionNum{
+	position: absolute;
+	right:10px;
+	top:0;
+	background-image: url(../base/img/versionUptate.ing);
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding-right: 24px;
+}
+.haveTheLatest{
+	position: absolute;
+	right:10px;
+	top:0;
+	color:#0E6EB8;
+}
+.versionInfo{
+	margin: 30px 225px 0 225px;
+	width: auto;
+	height:auto;
+	position: relative;
+	background-color: #FFFFFF;
+	border:1px solid #29A7E1;
+	border-radius: 10px;
+	padding: 0 0 25px 25px;
+}
+.versionInfoTitle{
+	line-height: 44px;
+	height: 44px !important;
+	width: auto;
+	border-bottom: 1px solid #D3D3D3;
+}
+.newFunction{
+	margin-top:10px;
+	margin-bottom: 4px;
+	height: 22px;
+	line-height: 22px;
+}
+.newFunctionList{
+	line-height: 24px;
+	height: auto;
+	padding-left: 20px;
+}
+.newFunctionList li{
+	list-style-type: inherit;
+}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+ <header class="top-title c1 fs24">
+
+
+	<h1 class="title textC">
+	<%=lang.about%>EBT
+	</h1>
+
+	<div class="time leftTop">
+		<img src="../base/realImg/back.png" alt=""></div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content fs20">
+	<div class="checkUpdate">
+		<div class="checkTitle c1"><%= lang.update%></div>
+		<div class="newVersionNum c1"><%= 'V'+App.iosAppVersion%></div>
+		<!--
+		<div class="haveTheLatest c1">已是最新版本</div>
+		-->
+	</div>
+
+	<div class="versionInfo">
+		<div class="versionInfoTitle">
+			<%= lang.comeOut%>
+		</div>
+		<div class="newFunction">
+			<%= lang.newFunction%>
+		</div>
+			<li><%= lang.iosReleaseNote%></li>	
+	</div>
+
+</div>
+
+
+<!-- 遮罩层 -->
+<div class="masker"></div>
+<footer class="footer-menu"></footer>

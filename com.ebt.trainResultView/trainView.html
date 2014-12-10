@@ -1,0 +1,192 @@
+<style type="text/css" media="all">
+/*put your style here*/
+.content{
+	position: relative;
+	width:auto !important;
+}
+.annualItems{
+	margin-top: 52px;
+   	height:440px;
+   	background-color: #FFFFFF;
+   	width:96%;
+   	margin-left: 2%;
+   	margin-right: 2%;
+   }
+ h1{
+ 	font-weight: normal;
+ }
+.leftTop{
+	left: 0 !important;
+	padding: 0 24px;
+}
+.leftTop img{
+	margin-top: 18px !important;
+}
+.content:before {
+	content: '';
+	position: fixed;
+	top: 120px;
+	right:0;
+	left: 0;
+	height: 14px;
+	background: #E89216;
+	margin-left: -3px;
+}
+.swiper-slide {
+  width:742px !important;
+  height: 502px !important;
+  float: left;
+  padding:133px 141px 13px 141px;
+}
+.swiper-container{
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.swiper-wrapper{
+	position: relative;
+ 	height: 100%;
+ 	width: auto !important;
+	overflow: hidden;
+}
+.everyYearGraph{
+	width:740px;
+	height: 500px;
+	border:1px solid #29A7E1;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	display: inline-block;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.error{
+	position: absolute;
+	top:200px;
+	color:#7c7477;
+	width:100%;
+	display: none;
+	z-index: 99999;
+}
+.year{
+	position: absolute;
+	width:100px;
+	height:84px;
+	top:-109px;
+	left:321px;
+	background-image: url(../base/img/trainResult.ing);
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 26px;
+	line-height: 84px;
+}
+.top{
+	position: absolute;
+	left: 80px;
+	top:0;
+	height: 40px;
+	width: 580px;
+	border-bottom: #CFCFCF solid 1px;
+}
+.tab{
+	position: absolute;
+	left: 108px;
+	top:9px;
+	height: 22px;
+	width: 364px;
+}
+.tabItem{
+	width:120px;
+	background-color: #FFFFFF;
+	border-top: 1px solid #29A7E1;
+	border-bottom:1px solid #29A7E1;
+	border-right: 1px solid #29A7E1;
+	float: left;
+	line-height: 20px;
+	height: 20px;
+}
+.tabItem:first-child{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-left: 1px solid #29A7E1;
+}
+.tabItem:last-child{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.tabActive{
+	color:#FFFFFF;
+	background-color: #29A7E1;
+}
+.slide_left{
+	width:60px;
+	height:90px;
+	position: fixed;
+	top:403px;
+	left:40px;
+	background-image: url(../base/img/slide_l.ing);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+}
+.slide_right{
+	width:60px;
+	height:90px;
+	position: fixed;
+	top:403px;
+	right:40px;
+	background-image: url(../base/img/slide_r.ing);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+}
+.tip{
+	position: fixed;
+	left:0;
+	top:340px;
+	color:#7c7477;
+	display:none;
+	width:100%;
+	z-index: 99999;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+
+<!-- header -->
+<header class="top-title c1 fs24" style  = 'position:relative;'>
+	<div class="time leftTop">
+		<img src="../base/realImg/back.png" alt=""></div>
+	<h1 class="title textC"><%=lang.train_view%></h1>
+
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+<div class="content">
+
+<!-- 		
+<div id="allCanvas">
+</div> -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--Slide-->
+       <!--Etc..-->
+    </div>
+</div>
+
+
+
+
+
+</div>
+<div class="slide_left"></div>
+<div class="slide_right"></div>
+<div class="tip fs24 textC"></div>
+<footer class="footer-menu"></footer>

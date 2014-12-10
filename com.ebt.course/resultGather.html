@@ -1,0 +1,264 @@
+<style type="text/css" media="all">/* put your style here */
+html{font-size:68.5%}
+.top-title{font-size:24px;}
+.rightTop{font-size:18px;}
+.content {
+	position: relative;
+	width: 96%;
+	margin: 0 auto;
+	height:638px;
+	-webkit-user-select: none;
+}
+.scorelist {
+	border-radius: 5px;
+	overflow: hidden;
+	background: #fff;
+}
+.item_title {
+	text-indent: 1em;
+	margin-top: 15px;
+	line-height: 30px;
+}
+.sub_top {
+	overflow: hidden;
+	line-height: 40px;
+	background: #329dd1;
+	position: relative;
+	height: 40px !important;
+}
+.score_type, .sub_list {
+	padding: 0 40px 0 20px;
+	-webkit-box-sizing: border-box;
+}
+.sub_list {
+	padding-top: 10px;
+}
+.sub_item {
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+	min-height:100px;
+}
+.sub_item:last-child {
+	border-bottom: none;
+}
+.sub_item_title {
+	line-height: 30px;
+}
+.sub_title_pic {
+	letter-spacing: 1.5em;
+}
+.repeat_item, .grade_item, .score_item {
+	-webkit-box-sizing: border-box;
+	line-height: 29px;
+	position: relative;
+	margin-top:7px;
+}
+.repeat_item>div:first-child, .grade_item>div:first-child, .score_item>div:first-child {
+	color: #aeaeb0;
+}
+.sub_item_detail {
+	font-size: 0;
+}
+.sub_item_detail>span {
+	display: inline-block;
+	width: 50px;
+	border: 1px solid #329dd1;
+	border-left: none;
+	text-align: center;
+	font-size: 1.4rem;
+}
+.sub_item_detail>span:first-child {
+	border-left: 1px solid #329dd1;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.sub_item_detail>span:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.sub_item_detail>span.active {
+	background: #329dd1;
+	color: #fff;
+}
+.score_pre, .score_next, .repeat_pre, .repeat_next {
+	width: 25px !important;
+	background: #329dd1;
+	color: #fff;
+}
+.score_pre:active, .score_next:active, .repeat_pre:active, .repeat_next:active {
+	background: #dddddd;
+}
+
+/* 默认不显示可编辑项 */
+.disNone {
+	display: none;
+}
+#wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 40px;
+	z-index: 1;
+	width: 100%;
+	height: 638px;
+	overflow: hidden;
+}
+#scroller {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	padding-bottom:30px;
+}
+.problem_list,.otherinfo_text {
+	background: #fff;
+	padding: 5px 15px;
+	border-radius: 5px;
+	border: 1px solid #309ecf;
+	word-break:break-all;
+}
+.otherinfo_text{margin-top:10px;}
+.otherinfo_title {
+	background: #29a7e1;
+	position: relative;
+	border-radius: 5px;
+	padding: 3px 0
+}
+.otherImg {
+	position: absolute;
+	right:0;
+	top: 0;
+	width: 26px;
+	padding:5px;
+}
+.improve textarea {
+	box-shadow: none;
+}
+
+/* 底部提交按钮 */
+.BtnLabel {
+	height: 70px !important;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	z-index: 9;
+	background: #fff;
+	border-top: 1px solid #ddd;
+	/* letter-spacing: 3em;
+	*/
+}
+.returnHome {
+	background: url("../base/img/homeIconA.ing") no-repeat center 0;
+	height: 70px;
+	width: 180px;
+	display: inline-block;
+	line-height: 110px;
+	color: #309ecf;
+	background-size: 40px 40px;
+}
+.returnHome:active{
+	background: url("../base/img/homeIcon.ing") no-repeat center 0;
+	background-size: 40px 40px;
+	background-color: #309ecf;
+	color: #fff;
+}
+.uploadTip {
+	display: block;
+	height: 190px;
+	width: 450px;
+	position: absolute;
+	top: 50%;
+	margin-top: -95px;
+	left: 50%;
+	margin-left: -225px;
+	background: #fff;
+	z-index: 99;
+	border-radius: 5px;
+}
+.bgred{background: #f00;padding:0px 15px;margin-right:5px;}
+.bggreen{background: rgb(56, 182, 56);padding:0px 15px;margin-right:5px;}
+.footBtn {
+	border-top: 1px solid #ddd;
+	line-height: 40px;
+	margin-top:20px
+}
+.upload_cancel {
+	border-right: 1px solid #ddd;
+}
+.tipmsg {
+	padding: 20px 50px 0 50px;
+}
+.ifPass {
+	padding: 20px 10px 0 10px;
+}
+.remark {
+	position: absolute;
+	right: -30px;
+	top: 0;
+}
+.remark>img {
+	width: 30px;
+	height: 30px;
+}
+textarea:focus {
+	color: #000
+}
+.showCoreDetail .score span {
+	margin: 0 auto;
+	display: inline-block;
+	width: 30px;
+}
+#lhscore{
+	background: #f00;
+	border-radius: 15px;
+	color: #fff;
+	text-decoration: underline;
+}
+.toggleDown,.showCore,.itemCantain{display: none;}
+.rightTop{
+	right:24px !important;
+}
+.leftTop span{
+	margin-left: 62px;
+}
+.leftTop img{
+	position: absolute;
+	padding-left:24px;
+	padding-right:24px;
+	padding-top: 18px;
+	padding-bottom: 17px;
+}
+</style>
+<script type="text/x-underscore-template">//put your template here</script>
+<!-- header -->
+<header class="top-title c1">
+	<div class="leftTop">
+		<span class="courseInfo"></span>
+	</div>
+	<div class="rightTop"></div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+
+<div class="content">
+<div id="wrapper">
+	<div id="scroller"></div>
+</div>
+</div>
+<div class="BtnLabel textC">
+<div class="returnHome"><%=lang.returnhome%></div>
+</div>
+<!-- 上传成功提醒 -->
+<div class="uploadTip textC fs20">
+<div class="ifPass c2"><span class="ifPassStatus"></span><span class="ifPassText"></span></div>
+<div class="tipmsg c0"><%=lang.upsuccess%></div>
+<div class="footBtn flex c2">
+	<div class="upload_cancel"><%=lang.cancel%></div>
+	<div class="upload_Confirm"><%=lang.upload%></div>
+</div>
+</div>
+<div class="masker"></div>

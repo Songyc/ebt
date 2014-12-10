@@ -1,0 +1,477 @@
+{
+    "result": [{
+        "first": "尊敬的hom：",
+        "second": "参照《评分标准》，本人认为通过复训训练。故申诉，希望给予重视和采纳,申诉理由如下：",
+        "third": "本人严格按照手册操作程序，进近合规，不应为不及格科目。"
+    }]
+}
+
+{
+    "result": [{
+        "courseId": "1284",
+        "courseName": "annie -2015下半年副驾驶课程（3课时）",
+        "courseType": "复训",
+        "courseYear": "2015",
+        "courseYearperiod": "下半年",
+        "lessons": [{
+            "endTime": "2014-08-21 10:42:17",
+            "instructor": "戴鹏程",
+            "lessonId": "1841",
+            "lessonNo": "第二课",
+            "lessonType": "训练",
+            "passed": "通过",
+            "resultId": "109",
+            "startTime": "2014-08-21 10:42:08",
+            "station": "三亚"
+        }, ],
+        "month": "8月",
+        "pnf": "成波",
+        "skilledLevel": "副驾驶",
+        "studentId": "dwei_liu",
+        "studentName": "刘大巍"
+    }, {
+        "courseId": "1268",
+        "courseName": "Annietest-2015-上半年",
+        "courseType": "复训",
+        "courseYear": "2015",
+        "courseYearperiod": "上半年",
+        "lessons": [{
+            "endTime": "2014-08-20 16:19:26",
+            "instructor": "戴鹏程",
+            "lessonId": "1805",
+            "lessonNo": "第一课",
+            "lessonType": "训练",
+            "passed": "未通过",
+            "resultId": "96",
+            "startTime": "2014-08-20 16:14:08",
+            "station": "三亚"
+        }],
+        "month": "8月",
+        "pnf": "黎博阳",
+        "skilledLevel": "机长",
+        "studentId": "dwei_liu",
+        "studentName": "刘大巍"
+    }, {
+        "courseId": "1269",
+        "courseName": "Annie -2015上半年副驾驶课程（2课时）",
+        "courseType": "复训",
+        "courseYear": "2015",
+        "courseYearperiod": "上半年",
+        "lessons": [{
+            "endTime": "2014-08-18 17:11:43",
+            "instructor": "刘大巍",
+            "lessonId": "1809",
+            "lessonNo": "第二课",
+            "lessonType": "检查",
+            "passed": "通过",
+            "resultId": "34",
+            "startTime": "2014-08-18 17:11:18",
+            "station": "广汉"
+        }, {
+            "endTime": "2014-08-18 17:01:36",
+            "instructor": "刘大巍",
+            "lessonId": "1808",
+            "lessonNo": "第一课",
+            "lessonType": "训练",
+            "passed": "通过",
+            "resultId": "33",
+            "startTime": "2014-08-18 16:59:34",
+            "station": "广汉"
+        }],
+
+        "pnf": "成波",
+        "skilledLevel": "副驾驶",
+        "studentId": "dwei_liu",
+        "studentName": "刘大巍"
+    }],
+    "resultCode": 0,
+    "resultMsg": "调用成功"
+}
+
+{
+    "result": [{
+        "months": [{
+            "courseMonth": "8",
+            "finishedLessons": [{
+                "courseId": "1322",
+                "courseName": "\u673A\u957F-\u6D4B\u8BD5\u516B\u5927\u80FD\u529B3\u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0A\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-29 15:53:00",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1916",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "226",
+                    "startTime": "2014-08-29 15:53:00",
+                    "station": "\u4E09\u4E9A"
+                }],
+                "month": "8",
+                "pnf": "Yunhuh",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "zhf_yin",
+                "studentName": "\u6BB7\u6CBB\u5CF0",
+                "year": "2014"
+            }, {
+                "courseId": "1334",
+                "courseName": "\u6D4B\u8BD5\u516B\u5927\u80FD\u529B3\u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0B\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-29 10:45:54",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1938",
+                    "lessonNo": "\u7B2C\u4E09\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "219",
+                    "startTime": "2014-08-29 10:45:31",
+                    "station": "\u6606\u660E"
+                }, {
+                    "endTime": "2014-08-29 10:43:42",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1937",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u672A\u901A\u8FC7",
+                    "resultId": "218",
+                    "startTime": "2014-08-29 10:43:21",
+                    "station": "\u6606\u660E"
+                }],
+                "month": "8",
+                "pnf": "\u5C39\u6798",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "yin_rui",
+                "studentName": "\u5C39\u6798",
+                "year": "2014"
+            }, {
+                "courseId": "1318",
+                "courseName": "\u6D4B\u8BD5\u516B\u5927\u80FD\u529B2\u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0B\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-28 13:56:45",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1905",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "206",
+                    "startTime": "2014-08-28 13:56:21",
+                    "station": "\u534E\u6B27"
+                }, {
+                    "endTime": "2014-08-28 13:45:49",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1904",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u672A\u901A\u8FC7",
+                    "resultId": "205",
+                    "startTime": "2014-08-28 13:36:09",
+                    "station": "\u6606\u660E"
+                }],
+                "month": "8",
+                "pnf": "\u7F57\u4FCA\u4F0D",
+                "skilledLevel": "\u526F\u9A7E\u9A76",
+                "studentId": "jw_luo",
+                "studentName": "\u7F57\u4FCA\u4F0D",
+                "year": "2014"
+            }, {
+                "courseId": "1317",
+                "courseName": "\u6D4B\u8BD5\u516B\u5927\u80FD\u529B",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0A\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-28 13:21:19",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1902",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "203",
+                    "startTime": "2014-08-28 13:19:25",
+                    "station": "\u534E\u6B27"
+                }],
+                "month": "8",
+                "pnf": "\u7F57\u4FCA\u4F0D",
+                "skilledLevel": "\u526F\u9A7E\u9A76",
+                "studentId": "jw_luo",
+                "studentName": "\u7F57\u4FCA\u4F0D",
+                "year": "2014"
+            }, {
+                "courseId": "1317",
+                "courseName": "\u6D4B\u8BD5\u516B\u5927\u80FD\u529B",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0A\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-27 16:53:35",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1902",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "197",
+                    "startTime": "2014-08-27 16:51:31",
+                    "station": "\u6606\u660E"
+                }],
+                "month": "8",
+                "pnf": "\u66F9\u6653\u78CA",
+                "skilledLevel": "\u526F\u9A7E\u9A76",
+                "studentId": "wang_li11",
+                "studentName": "\u738B\u9ECE",
+                "year": "2014"
+            }, {
+                "courseId": "1322",
+                "courseName": "\u673A\u957F-\u6D4B\u8BD5\u516B\u5927\u80FD\u529B3\u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0A\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-27 15:22:52",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1917",
+                    "lessonNo": "\u7B2C\u4E09\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "196",
+                    "startTime": "2014-08-27 15:21:55",
+                    "station": "\u6606\u660E"
+                }],
+                "month": "8",
+                "pnf": "\u66F9\u6653\u78CA",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "yin_rui",
+                "studentName": "\u5C39\u6798",
+                "year": "2014"
+            }, {
+                "courseId": "1318",
+                "courseName": "\u6D4B\u8BD5\u516B\u5927\u80FD\u529B2\u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0B\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-26 14:20:29",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1905",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "184",
+                    "startTime": "2014-08-26 14:20:06",
+                    "station": "\u6606\u660E"
+                }, {
+                    "endTime": "2014-08-26 14:12:04",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1904",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "182",
+                    "startTime": "2014-08-26 14:08:47",
+                    "station": "\u4E09\u4E9A"
+                }],
+                "month": "8",
+                "pnf": "\u5B59\u4F1F\u535A",
+                "skilledLevel": "\u526F\u9A7E\u9A76",
+                "studentId": "xl-cao",
+                "studentName": "\u66F9\u6653\u78CA",
+                "year": "2014"
+            }, {
+                "courseId": "1308",
+                "courseName": "E190 ST \u6D4B\u8BD5\u56DE\u5F52bug-3 \u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0A\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-25 15:09:38",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1893",
+                    "lessonNo": "\u7B2C\u4E09\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "170",
+                    "startTime": "2014-08-25 15:09:19",
+                    "station": "\u6606\u660E"
+                }, {
+                    "endTime": "2014-08-25 15:09:11",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1892",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "171",
+                    "startTime": "2014-08-25 15:05:47",
+                    "station": "\u4E09\u4E9A"
+                }, {
+                    "endTime": "2014-08-25 15:05:41",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1891",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u672A\u901A\u8FC7",
+                    "resultId": "172",
+                    "startTime": "2014-08-25 15:04:44",
+                    "station": "\u6606\u660E"
+                }],
+                "month": "8",
+                "pnf": "\u5434\u5EFA\u6770",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "jj-wu",
+                "studentName": "\u5434\u5EFA\u6770",
+                "year": "2014"
+            }, {
+                "courseId": "1310",
+                "courseName": "2015-\u4E0B E190 ST \u6D4B\u8BD5\u56DE\u5F52bug-2 \u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2015",
+                "courseYearperiod": "\u4E0B\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-25 14:45:43",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1898",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "166",
+                    "startTime": "2014-08-25 14:45:10",
+                    "station": "\u534E\u6B27"
+                }, {
+                    "endTime": "2014-08-25 14:30:54",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1897",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "164",
+                    "startTime": "2014-08-25 14:30:25",
+                    "station": "\u6606\u660E"
+                }],
+                "month": "8",
+                "pnf": "\u5B59\u4F1F\u535A",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "wang-chao9",
+                "studentName": "\u738B\u8D857",
+                "year": "2014"
+            }, {
+                "courseId": "1309",
+                "courseName": "2015-\u4E0A E190 ST \u6D4B\u8BD5\u56DE\u5F52bug-3 \u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2015",
+                "courseYearperiod": "\u4E0A\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-25 14:17:48",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1896",
+                    "lessonNo": "\u7B2C\u4E09\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "162",
+                    "startTime": "2014-08-25 14:17:04",
+                    "station": "\u534E\u6B27"
+                }, {
+                    "endTime": "2014-08-25 14:12:43",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1894",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u672A\u901A\u8FC7",
+                    "resultId": "159",
+                    "startTime": "2014-08-25 14:10:11",
+                    "station": "\u6606\u660E"
+                }],
+                "month": "8",
+                "pnf": "\u5B59\u4F1F\u535A",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "wang-chao9",
+                "studentName": "\u738B\u8D857",
+                "year": "2014"
+            }, {
+                "courseId": "1306",
+                "courseName": "2014-\u4E0B E190 ST \u6D4B\u8BD5\u56DE\u5F52bug-3 \u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0B\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-25 14:02:49",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1886",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "158",
+                    "startTime": "2014-08-25 14:02:19",
+                    "station": "\u4E0A\u6D77\u4E1C\u65B9\u98DE\u57F9"
+                }, {
+                    "endTime": "2014-08-25 14:00:33",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1885",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u672A\u901A\u8FC7",
+                    "resultId": "157",
+                    "startTime": "2014-08-25 13:54:48",
+                    "station": "\u4E0A\u6D77\u4E1C\u65B9\u98DE\u57F9"
+                }],
+                "month": "8",
+                "pnf": "\u5B59\u4F1F\u535A",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "wang-chao9",
+                "studentName": "\u738B\u8D857",
+                "year": "2014"
+            }, {
+                "courseId": "1305",
+                "courseName": "E190 ST \u6D4B\u8BD5\u56DE\u5F52bug-3 \u8BFE\u65F6",
+                "courseType": "\u590D\u8BAD",
+                "courseYear": "2014",
+                "courseYearperiod": "\u4E0A\u534A\u5E74",
+                "lessons": [{
+                    "endTime": "2014-08-25 13:01:20",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1884",
+                    "lessonNo": "\u7B2C\u4E09\u8BFE",
+                    "lessonType": "\u68C0\u67E5",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "148",
+                    "startTime": "2014-08-25 13:01:08",
+                    "station": "\u4E09\u4E9A"
+                }, {
+                    "endTime": "2014-08-25 13:00:20",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1883",
+                    "lessonNo": "\u7B2C\u4E8C\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "147",
+                    "startTime": "2014-08-25 13:00:08",
+                    "station": "\u4E09\u4E9A"
+                }, {
+                    "endTime": "2014-08-25 12:12:00",
+                    "instructor": "\u9ECE\u535A\u9633",
+                    "lessonId": "1882",
+                    "lessonNo": "\u7B2C\u4E00\u8BFE",
+                    "lessonType": "\u8BAD\u7EC3",
+                    "passed": "\u901A\u8FC7",
+                    "resultId": "146",
+                    "startTime": "2014-08-25 12:10:34",
+                    "station": "\u4E09\u4E9A"
+                }],
+                "month": "8",
+                "pnf": "\u5B59\u4F1F\u535A",
+                "skilledLevel": "\u673A\u957F",
+                "studentId": "wang-chao9",
+                "studentName": "\u738B\u8D857",
+                "year": "2014"
+            }]
+        }],
+        "year": "2014"
+    }],
+    "resultCode": 0,
+    "resultMsg": "\u8C03\u7528\u6210\u529F"
+}

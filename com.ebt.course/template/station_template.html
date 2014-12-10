@@ -1,0 +1,63 @@
+<script id="station_template" type="text/x-underscore-template">
+    <%
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+    %>
+  <%
+  %>
+     <header class="top-title c1 fs24">
+     <div class="time leftTop">
+		<img src="../base/img/back.ing" alt=""></div>
+	    <h1 class="title width40 textE">
+	    <%=result.courseYear%><%=result.courseYearperiod%><%=result.actype%><%=lang.acType%><%=result.courseType%><%=lang.course%></h1>
+	 <div class="rightTop fs20 textE width50">
+	 	<%=lang.apply%>：<%=result.skilledLevel%></div>
+	 </header>
+     
+    
+<div class="content fs20">
+  	<div class="inputInfo">
+        <!--课程的训练场地-->
+         <div class="selectStation textC c2">
+         <label class="stationTitle fw textL c0"><%=lang.tranPlace%>:</label>
+            <%   
+            if(typeof result.stationCodes !=="undefined" && result.stationCodes !==null && result.stationCodes !=="" && result.stationCodes.length !==0){
+            _.each(result.stationCodes,function(stationItem,index){
+              if(index==0){%>
+                 <div class="stationItem stationItemActive" data-value=<%=stationItem.code%>><%=stationItem.name%></div>
+               <%}else{%>
+                 <div class="stationItem" data-value=<%=stationItem.code%>><%=stationItem.name%></div>
+              <%}
+           }
+           )}
+          }%>
+          </div>
+        <!--训练日期-->
+        <div class="trainDate c0">
+         <label class="trainDateTitle fw"><%=lang.tranDate%>:</label>
+         <div class="trainDateInput"></div>
+         <img src="../base/img/chooseCourseTime.ing" alt="" class="trainDatePic">
+        </div>
+      <!--用户输入信息-->
+    <div class="userinfo flex">
+  		<div class="LSide">
+  			<div class="fw"><%=lang.lseat%>：</div>
+  				<input type="text" id="stuPF" placeholder="<%=lang.stukeywordsPF%>" class="fs22" data-value="PF" data-studentSeat="L">
+        <div class="seattype flex textC c2">
+          <div class="seat_item active pf">PF</div>
+          <div class="seat_item pnf">PNF</div>
+        </div>
+  		</div>
+      <div class="splitLine"><!--华丽的分割线--></div>
+  		<div class="RSide">
+  			<div class="fw"><%=lang.rseat%>：</div>
+  				<input type="text" id="stuPNF" placeholder="<%=lang.stukeywordsPNF%>" class="fs22" data-value="PNF" data-studentSeat="R">
+        <div class="seattype flex textC c2">
+          <div class="seat_item pf">PF</div>
+          <div class="seat_item active pnf">PNF</div>
+        </div>
+  		</div>
+      </div>
+  				<div class="beginCourseBtn textC c1 fs24"><%=lang.courseBegin%></div>
+  	</div>
+</div>
+</script>

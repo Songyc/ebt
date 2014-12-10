@@ -1,0 +1,498 @@
+<style type="text/css" media="all">
+.edit {
+    height: 28px;
+    width: 28px;
+    background-image: url("../base/img/topdel.ing");
+    background-size: 100% 100%;
+    -webkit-box-sizing: border-box;
+}
+.edit.active {
+    background-image: url("../base/img/zanc.ing");
+}
+.course_item_masker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+.course_item_masker>img{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-29px;
+	margin-top:-28px;
+}
+.leftTop {
+    left: 65px !important;
+}
+.leftTop img {
+    margin-top: 13px !important;
+}
+.uploadCourse {
+    display: inline-block;
+    margin: 0 30px 0 10px;
+}
+.backbtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14px;
+    height: 24px;
+    padding: 18px 24px 17px 24px;
+}
+.aside {
+    width: 154px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../base/img/shadow.ing);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.content {
+    position: absolute;
+    top: 60px;
+    bottom: 40px;
+    height: auto !important;
+    width: auto !important;
+    z-index: 0;
+}
+.content:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    width: 14px;
+    background: #E89216;
+    left: 64px;
+    margin-left: -3px;
+}
+.courseList {
+    padding: 0 20px 0 172px;
+    margin: 0 auto;
+}
+.course_year {
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    padding-top: 2px;
+}
+.course_year:last-child {
+    margin-bottom: -9px;
+}
+.timeline {
+    position: absolute;
+    left: 46px;
+    width: 84px;
+    height: 92px;
+    color: #fff;
+    border-radius: 50px;
+    margin: -13px 0 0 -20px;
+    font-size: 26px;
+    line-height: 85px;
+    text-align: center;
+}
+.course_month {
+    height: auto;
+    overflow: hidden;
+}
+.course_month>div {
+    position: relative;
+    width: 46%;
+    display: inline-block;
+    height: 304px;
+    background: #FFFFFF;
+    float: left;
+    -webkit-box-sizing: border-box;
+    margin: 1px 1.5% 25px 1.5%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+}
+.editCourse {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: transparent url("../base/img/edit.ing") 0 0;
+    background-size:100%;
+}
+img[data-dagou="dagou"] {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.bgone {
+    background-image: url(../base/img/time_base.ing);
+    background-repeat: no-repeat;
+}
+.bgtwo {
+    background: #000066
+}
+/* 详情对话框样式 */
+
+.courseTip {
+    border-radius: 10px;
+    background: #FFFFFF;
+    position: absolute;
+    line-height: 30px;
+    display: none;
+    z-index: 99;
+    color: #3A3635 !important;
+}
+.course_ref {
+    height: auto;
+    overflow: hidden;
+}
+.course_ref_title {
+    float: left;
+}
+.course_ref_title {
+    width: 90px;
+}
+.course_ref_list li {
+    list-style: inside disc;
+    margin-left: 2px;
+}
+/* 搜索框样式 */
+
+.actype_input {
+    display: none;
+}
+.searchDailog {
+    width: 500px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 99;
+    margin-left: -250px;
+    background-color: #FFFFFF;
+    display: none;
+    border-radius: 10px;
+}
+.searchLabel {
+    position: relative;
+    border-bottom: 2px solid #D0D0D0;
+    height: 50px;
+    line-height: 50px;
+    color: #231A15;
+    display: block;
+}
+.cancelBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 18px;
+    color: #319CD0;
+}
+.confirmBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 18px;
+    color: #319CD0;
+}
+.searchItem {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 18px;
+    border-bottom: 2px solid #D0D0D0;
+}
+.searchItem:last-child {
+    border-bottom: none;
+}
+.searchItemName {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #231A15;
+}
+.chooseLessonTime,
+.chooseCourseTime {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #319CD0;
+    padding-right: 40px;
+    background: url(../base/img/chooseCourseTime.ing) no-repeat 200px;
+}
+#courseYear,
+#courseYearperiod {
+    display: inline-block;
+    color: #319CD0;
+}
+#courseYearperiod {
+    margin-left: 5px;
+}
+#skilledLevel {
+    overflow: hidden;
+    height: auto;
+    position: absolute;
+    left: 100px;
+    right: 25px;
+    top: 11px;
+    height: 26px;
+    line-height: 26px !important;
+}
+.skilledLevelItem {
+    color: #329DD1;
+    border: #329DD1 1px solid;
+    border-right: none;
+    max-width: 100px;
+}
+.skilledLevelItem:first-child {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.skilledLevelItem:last-child {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-right: #329DD1 1px solid
+}
+.skilledLevelItem.active {
+    background-color: #329DD1;
+    color: #FFFFFF;
+}
+#studentId,
+#courseName {
+    position: absolute;
+    left: 90px;
+    right: 25px;
+    top: 0;
+    height: 100%;
+    color: #329DD1;
+    line-height: 26px;
+    width: 357px;
+    box-shadow: none !important;
+}
+input::-webkit-input-placeholder {
+    color: #DCDEDD !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+/* iscroll */
+
+#wrapper {
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+#scroller {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    width: 100%;
+}
+.leftTop {
+    left: 50px !important;
+}
+.lh38 {
+    line-height: 38px;
+}
+.lh19 {
+    line-height: 19px;
+}
+.courseYear {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    width: auto;
+    z-index: 2;
+    color: #319DD0;
+}
+.courseTitle {
+    position: absolute;
+    top: 62px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    color: #319DD0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.downloadTip {
+    position: absolute;
+    top: 132px;
+    width: 100%;
+    height: 60px;
+}
+.download {
+    margin-left: 159px;
+}
+.already {
+    line-height: 60px;
+    color: #7B7B7D;
+}
+.course_item_bottom {
+    width: 100%;
+    height: 182px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #51b2df), color-stop(100%, #086cb8));
+    background: -webkit-linear-gradient(top, #51b2df 0%, #086cb8 100%);
+    background: linear-gradient(top, #51b2df 0%, #086cb8 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.courseBeginTime {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: auto;
+}
+.pfAndPnf p {
+    position: absolute;
+    top: 55px;
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pfAndPnf p:first-child {
+    left: 15px;
+}
+.pfAndPnf p:last-child {
+    right: 15px;
+}
+.station {
+    position: absolute;
+    left: 15px;
+    top: 95px;
+    width: auto;
+}
+.lessonNo {
+    position: absolute;
+    left: 15px;
+    top: 135px;
+    width: auto;
+}
+.arrow_down {
+    position: absolute;
+    right: 22px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 10px solid #FFFFFF;
+}
+.course_detail_info {
+    margin: 20px 20px 78px 20px;
+}
+.dagou {
+    position: absolute;
+    right: -13px;
+    bottom: -7px;
+    display: none;
+}
+.time {
+    left: 62px !important;
+}
+#lessonTime:focus {
+    color: #319CD0;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+
+<!-- header -->
+<header class="top-title c1 fs24">
+    <div class="backbtn">
+        <img src="../base/img/back.ing" alt="">
+    </div>
+    <div class="time leftTop fs20" id="showTime">2014-06-21 SAT 10:21</div>
+    <h1 class="title textC">
+        <%=lang.uploadLesson%>
+    </h1>
+    <div class="rightTop">
+       <!--  <div class="edit">
+        </div> -->
+        <div class="refresh">
+            <img src="../base/img/refresh.ing" alt="">
+        </div>
+        <div class="search">
+            <img src="../base/img/search.ing" alt="">
+        </div>
+        <div class="uploadCourse">
+            <img src="../base/img/uploadCourse.ing" alt="">
+        </div>
+    </div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+<div class="content">
+    <div class="aside"></div>
+    <div id="wrapper">
+        <div id="scroller">
+        </div>
+    </div>
+</div>
+<!-- 搜索框 -->
+<div class="searchDailog fs20">
+    <div class="searchForm">
+        <label class="searchLabel textC">
+            <div class="cancelBtn">
+                <%=lang.cancel%>
+            </div>
+            <%=lang.courseQuery%>
+                <div class="confirmBtn">
+                    <%=lang.confirm%>
+                </div>
+        </label>
+        <div class="searchItem actype">
+            <div class="searchItemName">
+                <%=lang.acType%>
+            </div>
+            <div id="skilledLevel" class="flex textC"></div>
+        </div>
+        <div class="searchItem courseTime">
+            <div class="searchItemName">
+                <%=lang.courseTime%>
+            </div>
+            <div class="chooseCourseTime">
+                <div id="courseYear"></div>
+                <div id="courseYearperiod"></div>
+            </div>
+        </div>
+        <div class="searchItem lessonTime">
+            <div class="searchItemName">
+                <%=lang.lessonTime%>
+            </div>
+            <div class="chooseLessonTime">
+                <div id="lessonTime">2014-08-11 14:54</div>
+            </div>
+        </div>
+        <div class="searchItem courseName">
+            <div class="searchItemName">
+                <%=lang.courseName%>:</div>
+            <input type="text" id="courseName" placeholder=<%=lang.keywords%>></div>
+        <div class="searchItem studentId">
+            <div class="searchItemName">
+                <%=lang.studentName%>:</div>
+            <input type="text" id="studentId" placeholder=<%=lang.stukeywords%>></div>
+    </div>
+</div>
+
+<!-- 遮罩层 -->
+<div class="masker"></div>
+<footer class="footer-menu"></footer>

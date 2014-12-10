@@ -1,0 +1,22 @@
+define({
+	"language": "en-us",
+	"about":"about",
+	"no_roles":"no roles login",
+	"request_timeout": "Request Timeout!",
+	"request_fail": "Request error, please try again later!",
+	"system_error": "System Error.",
+	"tip": " Please try again later.",
+	"logout_fail": "Logout failed.",
+	"autoRefreshTip": "当前使用的2G/3G流量，系统将不自动刷新‘我的工作 ’页面",
+	"network_not_available": "Cannot connect to internet. Please check your network.",
+	"session_timeout":"Session timed out. Please relogin.",
+	"alert":"Alert",
+	"ok":"OK",
+	"download_fail":"Failed to download, please try again later!",
+	"download_course_tip":"Please download the course!",
+	"search_course_tip":"Sorry,the course does not exist!",
+	"stuPF_empty_tip":"PF cannot be empty！",
+	"stuPNF_empty_tip":"PNF cannot be empty！",
+	"no_statistical_data":"Sorry,there is no statistical data！",
+	"no_training_result_info":"Sorry,you no training result information!"
+});

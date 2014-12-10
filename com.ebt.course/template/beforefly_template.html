@@ -1,0 +1,47 @@
+<script id="beforefly_template" type="text/x-underscore-template">
+<%
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+  %>
+  <%
+  	%>
+<header class="top-title c1 fs24">
+	<h1 class="title textC">
+	<%=result.courseYear%><%=result.courseYearperiod%>  <%=result.actype%><%=lang.actype%><%=result.courseType%><%=lang.course%>
+	</h1>
+</header>
+
+<div class="content">
+   <div id="wrapper">
+     <div id="scroller">
+<div class="beforeflyImg">
+</div>
+
+<div class="beforeflyTitle textC fs42">
+<%=lang.beforefly_title%>
+</div>
+
+<!--飞行前讲评start-->
+<%_.each(result.lessons,function(lessonItem,index){
+    if(lessonItem.lessonId==request("lessonId")){
+    	if(lessonItem.cbf!==null&&lessonItem.cbf!==undefined&&lessonItem.cbf!==""){
+%>
+<div class="beforeflyContent fs24">
+	<div class="slide_left"></div>
+    <div class="slide_right"></div>
+	<%=lessonItem.cbf%>
+</div>
+<%}else{%>
+	<div class="beforeflyContent fs24">
+	<div class="slide_left"></div>
+    <div class="slide_right"></div>
+    <div class="noBeforeFlyInfo fs24 textC"></div>
+    </div>
+<%}}})%>
+<!--飞行前讲评end-->
+     </div>
+   </div>
+</div>
+
+
+<%}%>	
+</script>

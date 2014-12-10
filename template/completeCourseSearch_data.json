@@ -1,0 +1,22 @@
+{
+	"resultCode": 0,
+	"resultMsg": "调用成功",
+	"result": [{
+		"studentId":"",
+		"instructorId":"",
+		"courseId":"",
+		"courseType":"ERJ190机型",
+		"courseYear":"2014年",
+		"courseYearperiod":"上半年",
+		"courseName":"复训课程",
+		"studentName":"张三",
+		"lessons":[{
+			"lessonId":"第三课",
+			"startTime":"2014年5月27号",
+			"endTime":"",
+			"station":"三亚",
+			"instructor":"张劲松",
+			"passed":"通过"
+			}]
+	}]
+}

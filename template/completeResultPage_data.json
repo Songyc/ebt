@@ -1,0 +1,30 @@
+{
+	"result":{
+		"actype": "E190",
+		"courseHours": 2,
+		"courseId": 1344,
+		"courseName": "sdf4444444",
+		"courseType": "\u590D\u8BAD",
+		"courseYear": "2014",
+		"courseYearperiod": "\u4E0B\u534A\u5E74",
+		"pnf": "\u5218\u4F1F",
+		"referMaterial": "sf",
+		"skilledExamRef": null,
+		"skilledLevel": "\u526F\u9A7E\u9A76",
+		"subjects": [{
+			"ratms": [{
+				"color": "#fff100",
+				"estimate": 3,
+				"name": "RATM\u6811\u4E8C\u7EA7\u5B50\u83DC\u5355\uFF0C\u4E00\u53F7",
+				"ratmId": 553,
+				"remark": null,
+				"repeat": 1,
+				"score": 1
+			}],
+			"subjectId": 518,
+			"subjectName": "s"
+		}]
+	},
+	"resultCode": 0,
+	"resultMsg": "\u8C03\u7528\u6210\u529F"
+}

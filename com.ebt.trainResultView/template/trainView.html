@@ -1,0 +1,66 @@
+<script id="trainView_template" type="text/x-underscore-template">
+<%
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+      $(".content").before().show();
+      $(".tip").html("").hide();  
+      if(result.length>1){
+        $(".slide_right").show();
+      }
+
+    	var annualItemsArr=[];
+    	var firstHalfYearItemsArr=[];
+    	var secondHalfYearItemsArr=[];
+
+    _.each(result,function(item,index){ 
+    	annualItemsArr.push("annualItems"+item.year);
+    	firstHalfYearItemsArr.push("firstHalfYearItems"+item.year);
+    	secondHalfYearItemsArr.push("secondHalfYearItems"+item.year);
+
+    	%>
+
+
+ <div class="swiper-slide" id=slide_<%=item.year%>> 
+     <div class="everyYearGraph">
+      <div class="top">
+        <div class="tab c2" id=tab<%=item.year%>>
+          <div class="tabItem tabActive textC" id=<%=item.year%>_annualItems><%=lang.allyear%></div>
+          <div class="tabItem textC" id=<%=item.year%>_firstHalfYearItems><%=lang.firHalfYear%></div>
+          <div class="tabItem textC" id=<%=item.year%>_secondHalfYearItems><%=lang.secHalfYear%></div>
+        </div>
+      </div>
+      <div class="year c1 textC">
+      <%=item.year%>
+      </div>
+     <div class="error fs24 textC" id=error<%=item.year%>><%=lang.no_statistical_data%></div>
+      <div class="annualItems" id=annualItems<%=item.year%>>
+      </div>
+      </div>
+  </div>
+
+
+
+   
+
+    <!--	<div class="firstHalfYearItems" id=firstHalfYearItems<%=item.year%>></div>
+   		<div class="secondHalfYearItems" id=secondHalfYearItems<%=item.year%>></div>-->
+
+    	
+
+ <%   });
+  %>
+  <!--	<div id="recordAnnualItemsArr">[<%=annualItemsArr%>]</div>
+    <div id="recordFirstHalfYearItemsArrr">[<%=firstHalfYearItemsArr%>]</div>
+    <div id="recordSecondHalfYearItemsArr">[<%=secondHalfYearItemsArr%>]</div>-->
+    <div class="pagination"></div>
+   	<div style="clear:both;"></div>
+ <%}else{
+    $(".content").before().hide();
+
+    $(".tip").html(lang.no_training_result_info).show();
+   
+    $(".slide_right").hide();
+
+
+}
+  %>
+  </script>

@@ -1,0 +1,492 @@
+<style type="text/css" media="all">
+/*put your style here*/
+.bg{
+	width:100%;
+	height:100%;
+}
+.courseList{
+	margin:0 2%;
+	/*padding:20px 0;  */
+	overflow:auto;
+}
+.title{
+	background: #329dd1;
+	width:100%;
+	height:40px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.sub_title{
+	text-indent: 1em;
+	margin-top: 15px;
+	line-height: 30px;
+}
+.sup_title{
+	height:40px;
+	position:relative;
+	/*margin-left:5%;*/
+	padding: 0 40px 0 20px;
+}
+.sup_list{
+	/*position:absolute;*/
+	width:40%;
+	height:100%;
+	/*left:40%;*/
+	line-height: 40px;
+	/*border-radius: 10px;*/
+	float:left;
+}
+.sup_list b{
+	display:inline-block;
+	width:30%;
+	text-align: center;
+	font-weight: normal;
+}
+.imgUl{
+	position:absolute;
+	top:5%;
+	left:90%;
+	padding:10px 15px;
+}
+.course{
+	height:auto;
+	padding:0 0;
+	background:#FFF;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.template{
+	min-height:135px;
+	border-top:1px solid #CCC;
+	/*margin-left:5%;*/
+	overflow: auto;
+	padding: 0 40px 0 20px;
+}
+.template:first-child{
+	border-top:none;
+}
+.lesson,.checkElement{
+	height: auto;
+	line-height: 45px;
+	float: left;
+	width: 100%;
+}
+.lesson{
+	padding-top: 20px;
+}
+.leLeft{
+	width: 40%;
+	float: left;
+	height: auto;
+}
+.leConter{
+	width:25%;
+	position:relative;
+	float:left;
+	height:100%;
+}
+.leConter img{
+	vertical-align: middle;
+	position: relative;
+	left:40%;
+}
+.leRight{
+	width:40%;
+	float:left;
+	height:46px;
+}
+.leRight b{
+	display: inline-block;
+	width:31%;
+	text-align: center;
+}
+.delete,.add,.count{
+	float:left;
+	height:20px!important;
+	border:1px solid #329dd1;
+	line-height: 20px;
+}
+.delete,.add{
+	background-color:#329dd1 ;
+	width:20%;
+	border-top-left-radius: 5px; 
+	border-bottom-left-radius: 5px; 
+	display: inline-block;
+}
+.add{
+	border-radius: 0;
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+	border-left:none;
+}
+.count{
+	width:54%;
+	border-radius: 0!important;
+	padding:0;
+	background-color: #FFF;
+	border-left:none;
+	color:#329dd1;
+	font-weight: normal;
+}
+.checkElement .leLeft b{
+	color:#999;
+	display: inline-block;
+	font-weight: normal;
+}
+.score .b{
+	margin:12.5px 0;
+}
+.question{
+	width:100%;
+	height:45px;
+	background-color: #FFF;
+	margin-top:20px;
+	line-height: 45px;
+	position: relative;
+}
+.easeColor{
+	color:#329dd1;
+}
+.easeColor2{
+	color:#999;
+}
+.addBtn{
+	position: absolute;
+	width: 150px;
+	height: 30px;
+	left: 79%;
+	top: 7px;
+	text-align: center;
+	background:#329dd1;
+	line-height: 30px;
+}
+#showInput{
+	position:absolute;
+	width: 50%;
+	height: 300px;
+	top: 27%;
+	left: 30%;
+	background-image: -webkit-linear-gradient(top, #868686, #323332 50%, #212121 51%, #202020 80%,#323332 81%,#323332);
+	display: none;
+	z-index: 100;
+}
+.courseBack{
+	height:33px;
+	line-height: 33px;
+	position:relative;
+	 font-weight: 900;
+	border-bottom: 1px solid rgb(99, 85, 85);
+}
+.icon{
+	 background-image: url('../base/img/u58_normal.ing');
+	 width:35px;
+	 height:31px;
+	 position:absolute;
+	 right:0px;
+	 top:0px;
+}
+.conBack{
+	height:76%;
+	position:relative;
+}
+.whiteBox{
+	background-color:#FFF;
+	height: 87%;
+	position: absolute;
+	top: 6%;
+	left: 2.5%;
+	width: 95%;
+	border-radius: 5px;
+}
+.whiteBtn{
+	border:1px solid #5C5555;
+	border-top:1px solid #726B6B;
+	position:relative;
+	height:80%;
+	width:90%;
+	left:5%;
+	top:10%;
+	z-index: 100;
+	resize:none;
+	color:#000;
+}
+textarea{
+	color:#000;
+}
+.footBack{
+	background-color:#868686;
+	height:13%;
+	position:relative;
+	z-index: 10;
+}
+.submit,.cancel{
+	width: 80px;
+	height: 25px;
+	border-radius: 5px;
+	position:absolute;
+	background-image: -webkit-linear-gradient(top,rgb(216, 167, 175),rgb(216, 167, 175) 50%,rgb(228, 40, 40) 51%,rgb(228, 40, 40));
+	border:2px solid black;
+	left:16%;
+	top:6px;
+	line-height: 28px;
+}
+.cancel{
+	background-image: -webkit-linear-gradient(top,rgb(255, 255, 255),rgb(253, 253, 253) 50%,rgb(87, 87, 87) 51%,rgb(73, 73, 73));
+	left:60%;
+}
+.lesson,.lesson b{
+	font-weight: normal;
+}
+.checkElement .leLeft b{
+	color:#aeaeb0;
+	font-weight: normal;
+}
+.score>div {
+	width: 31%;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.score span {
+	position: absolute;
+	z-index: 30;
+	top: 0px;
+	left: 50%;
+	margin-left: -6px;
+}
+.score, .score>p {
+	position: relative;
+}
+.score{
+	width:100%;
+	height:100%;
+}
+.redCircle {
+	position: absolute;
+	border: 15px solid red;
+	border-radius: 15px;
+	top: 8px;
+	left: 50%;
+	color: #fff;
+	width: 0px!important;
+	height: 0px!important;
+	margin-left: -17px;
+	z-index: 20;
+}
+.searchDailog,.returnInfoDialog {
+	width: 500px;
+	min-height:206px;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	z-index: 99;
+	margin-left:-250px;
+	margin-top:-103px;
+	/* background-image: -webkit-linear-gradient(top, #818181, #323332 50%, #212121 51%, #202020); */
+	background-color: #FFFFFF;
+	display: none;
+	border-radius: 10px;
+}
+.searchLabel {
+	position: relative;
+	border-bottom: 2px solid #D0D0D0;
+	height: 50px;
+	line-height: 50px;
+	color: #231A15;
+	display: block;
+}
+.cancelBtn{
+	position: absolute;
+	left:0;
+	top: 0;
+	padding: 0 18px;
+	color:#319CD0;
+}
+.confirmBtn,.commitBtn{
+	position: absolute;
+	right:0;
+	top:0;
+	padding: 0 18px;
+	color:#319CD0;
+}
+.searchItem {
+	/* display: -webkit-box; Safari and Chrome
+	display: -ms-flexbox; Internet Explorer 10
+	display: box;
+	-webkit-box-orient: horizontal;
+	height:25px;
+	margin-top:10px; */
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 18px;
+	border-bottom: 2px solid #D0D0D0;
+}
+.searchItemName{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #231A15;
+}
+.chooseCourseTime{
+	width:139px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color:#319CD0;
+    padding-right:64px;
+    background-image: url(../base/img/chooseCourseTime.ing);
+    background-repeat: no-repeat;
+    background-position: 160px 12px;
+}
+#courseYear,#courseYearperiod{
+	display: inline-block;
+	color:#319CD0;
+}
+#courseYearperiod{
+	margin-left: 5px;
+}
+#skilledLevel{
+	position: absolute;
+	left: 100px;
+	right: 25px;
+	top:11px;
+	/* border: #329DD1 1px solid; */
+	border-radius: 7px;
+	height: 26px;
+	line-height: 26px !important;
+}
+.skilledLevelItem{
+	width: 117px;
+	display: inline-block;
+	color:#329DD1;
+	border-top:  1px #329DD1 solid;
+	border-bottom: 1px #329DD1 solid;;
+	border-right: 1px #329DD1 solid;
+}
+.skilledLevelItem:first-child{
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	border-left: 1px #329DD1 solid;
+}
+.skilledLevelItem:last-child{
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.skilledLevelActive{
+	background-color: #329DD1;
+	color:#FFFFFF;
+}
+#courseName{
+	position: absolute;
+	left: 90px;
+	right: 25px;
+	top:11px;
+	height: 26px;
+	color:#329DD1;
+	line-height: 26px;
+	width:357px;
+	box-shadow: none !important;
+}
+input:-moz-placeholder{
+    color: #DCDEDD !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+input:-ms-input-placeholder {
+    color: #DCDEDD !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+input::-webkit-input-placeholder{
+    color: #DCDEDD !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+.refreLi img{
+	positon:absolute;
+	top: 211px;
+	left: 81%;
+	width:44px;
+	height:44px;
+	background-color:#fff;	
+	border-radius: 8px;
+}
+textarea{
+	border:none;
+	color:#000!important;
+	box-shadow: 0 0 0;
+	resize: none;
+}
+.leftTop{
+	margin-left:62px;
+	width:60%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	/*display: block;*/
+}
+header>img{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	padding: 18px 24px;
+}
+.rightTop{
+	right: 24px !important;
+}
+.wordsTip{
+	position: relative;
+	bottom: 9px;
+	right: 12px;
+	height: 24px;
+	text-align: right;
+}
+.returnInfoBox{
+	position: relative;
+}
+/*结束*/
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header class="top-title c1 fs24">
+	<img src = '../base/img/back.ing' class = 'back'>
+	<div class="time leftTop"></div>
+	<div class="time rightTop fs18"><%= lang.pf%><span class = 'pfName'></span>（<span class = 'pnfSkillLevel'></span>）| <%= lang.pnf%><span class = 'pnfName'></span></div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	
+			
+		
+</div>
+<!--课程反馈框-->
+<div class = 'returnInfoDialog fs20'>
+	<form class = 'returnInfoForm'>
+		<label class="searchLabel textC">
+		    <div class="cancelBtn"><%= lang.cancel%></div>
+			<%= lang.complaint%>
+			<div class="commitBtn"><%= lang.commit%></div>
+		</label>
+		<div class = 'returnInfoBox'>
+			<textarea class = 'fs20' value = '' name = 'textarea' rows = '7' cols ='20' maxlength = '200' />
+		</div>
+		<div class = 'wordsTip fs16'></div>
+	</form>
+</div>
+<!--课程反馈框结束-->
+<!-- 遮罩层 -->
+<div class="masker"></div>	
+<footer class="footer-menu"></footer>

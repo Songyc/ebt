@@ -1,0 +1,92 @@
+<script id = 'completeCourse_template' type = 'text/x-underscore-template'>
+<%
+	if(typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+%>
+		<%_.each(result,function(item,index){
+						%>
+		<%_.each(item.months,function(month_item,index){
+						%>
+
+<div class = 'course'>
+	<div class = 'iconCircle c1 fs26'><%= month_item.courseMonth%><%= lang.month%></div>
+	<ul class = 'refresher'>
+					<%_.each(month_item.finishedLessons,function(finishedLessons_month_item,month_index){
+						%>
+			
+					
+					<%_.each(finishedLessons_month_item.lessons,function(lessons_finishedLessons_month_item,indexs){%>
+
+					<li class = 'course_item' data-lessonid = <%= lessons_finishedLessons_month_item.lessonId%> data-courseid = <%= finishedLessons_month_item.courseId%> data-studentid = <%= finishedLessons_month_item.studentId%> 
+					data-resultId = <%= lessons_finishedLessons_month_item.resultId%> data-studentSeat = '<%= lessons_finishedLessons_month_item.studentSeat%>'>
+						<div class = 'link fs24 c2'>
+							<p class = 'p textC'>
+								<span class = 'courseYear' style = 'position:relative;z-index:4;'><%= finishedLessons_month_item.courseYear%>年<%= finishedLessons_month_item.courseYearperiod%></span>
+							</p>
+							<p class = 'textC'>
+								<span class = 'courseName' style = 'position:relative;z-index:4;'><%= finishedLessons_month_item.courseName%></span>
+							</p>
+							<div class = 'new_bg'><div class = 'new_replace '></div></div>
+							<div class = 'passed c1 fs20'>
+							<!--判断是否通过0为未通过，1为通过，-1为不显示-->
+							 <% var pass=lessons_finishedLessons_month_item.passed;
+							     if(pass=="0"){
+							     	pass=lang.noPassed
+							     }
+							     if(pass=="1"){
+							     	pass=lang.passed
+							     }
+							     if(pass=="-1"){
+							     	pass="";
+							     }
+							  %>
+								<span><%=pass%></span>
+							</div>
+						</div>
+						<div class = 'courseInfo fs24 c1'>
+							<% 
+							var endTime ,startTime;
+							if(lessons_finishedLessons_month_item.endTime){
+								endTime = lessons_finishedLessons_month_item.endTime.substring(11,16);
+							}
+							if(lessons_finishedLessons_month_item.endTime){
+								startTime = lessons_finishedLessons_month_item.startTime.substring(0,16);
+							}
+							%>	
+							<p>
+								<span><%= startTime%>-<%= endTime%></span>
+							</p>    
+					
+							<div class="pfAndPnf flex">
+							<%if(lessons_finishedLessons_month_item.studentSeat=="L"){%>
+								<p><span>PF：</span><span class = 'pf'><%= finishedLessons_month_item.studentName%></span></p>
+								<p><span>PNF：</span><span class = 'pnf'><%= lessons_finishedLessons_month_item.pnf%></span></p>
+							<%}else{%>
+								<p><span>PNF：</span><span class = 'pnf'><%= lessons_finishedLessons_month_item.pnf%></span></p>
+								<p><span>PF：</span><span class = 'pf'><%= finishedLessons_month_item.studentName%></span></p>
+							  <%}%>								
+							</div>
+							<div class="flex" style="line-height: 43px">
+								<div class = 'skilledLevel width65 textE'><%= finishedLessons_month_item.skilledLevel%></div>
+								<div class="width35 textR"><%= lessons_finishedLessons_month_item.station%></div>
+							</div>
+							<p>
+								<span class = 'lessonType'><%= lessons_finishedLessons_month_item.lessonNo%> ( <%= lessons_finishedLessons_month_item.lessonType%> ) </span>
+							</p>
+							<div class = 'courseImg'>
+								<img src = '../base/img/u06_normal.ing' alt = '' class ='imgUl'>
+							</div>
+						</div>
+						
+					</li>
+					
+					<%})%>
+				
+			<%})%>
+		
+	</ul>
+</div>	
+<%})%>
+<%})%>
+
+<%}%>
+</script>

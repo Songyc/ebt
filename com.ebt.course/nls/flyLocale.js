@@ -1,0 +1,28 @@
+define({
+	"root": {
+		"flydata_title": "起飞数据",
+		"from_to": "始发/目的地",
+		"flight": "航班号",
+		"flightRoad": "航路点",
+		"alternate": "备降场",
+		"airlineH": "航线高度",
+		"Alternate_distance": "备降距离",
+		"airline_distance": "航线距离",
+		"dbjjcgd": "到备降机场高度",
+		"CRZWIND ": "巡航风",
+		"wind_direction": "风向",
+		"dew_point": "露点",
+		"wind_speed": "风速",
+		"responder": "应答机",
+		"temperature": "温度",
+		"otherPro": "其他情况",
+		"qfzx": "起飞重心",
+		"wyzl": "无油重量",
+		"qftl": "起飞推力",
+		"Load": "油重",
+		"flap": "襟翼",
+		"lang_desc": "English",
+	},
+	"en-us": false,
+	"zh-cn": true
+});

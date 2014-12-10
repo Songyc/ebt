@@ -1,0 +1,87 @@
+<script id = 'guidedCourse_template' type = 'text/x-underscore-template'>
+<%
+	if(typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+%>
+
+
+<%_.each(result,function(item,index){%>
+	<%_.each(item.months,function(months_item,months_index){%>
+<div class = 'course'>
+<div class = 'iconCircle c1 fs26'><%= months_item.courseMonth%><%= lang.month%></div>
+	<ul class = 'refresher'>
+			<%_.each(months_item.finishedLessons,function(finishedLessons_months_item,finishedLessons_months_index){
+						%>
+					<%_.each(finishedLessons_months_item.lessons,function(lessons_finishedLessons_months_item,lessons_finishedLessons_months_index){
+						//console.log(indexs)
+						%>
+					<li class = 'course_item' data-lessonid=<%= lessons_finishedLessons_months_item.lessonId%> data-courseid=<%= finishedLessons_months_item.courseId%> data-studentid=<%= finishedLessons_months_item.studentId%> data-resultid = <%= lessons_finishedLessons_months_item.resultId%> data-studentSeat = '<%= lessons_finishedLessons_months_item.studentSeat%>' >
+						<div class = 'link fs24 c2'>
+							<p class = 'p textC'>
+								<span class = 'courseYear'><%= finishedLessons_months_item.courseYear%><%= lang.year%><%= finishedLessons_months_item.courseYearperiod%></span>
+							</p>
+							<p class = 'textC'>
+								<span class = 'courseName'><%= finishedLessons_months_item.courseName%></span>
+							</p>
+							<div class = 'new_bg'><div class = 'new_replace '></div></div>
+							<div class = 'passed c1 fs20 textC'>
+							<!--判断是否通过0为未通过，1为通过，-1为不显示-->
+							 <% var pass=lessons_finishedLessons_months_item.passed;
+							     if(pass=="0"){
+							     	pass=lang.noPassed
+							     }
+							     if(pass=="1"){
+							     	pass=lang.passed
+							     }
+							     if(pass=="-1"){
+							     	pass="";
+							     }
+							  %>
+							  <span><%=pass%></span>
+							</div>
+						</div>
+						<div class = 'courseInfo fs22 c1'>
+							<% 
+							var endTime,startTime;
+							if(lessons_finishedLessons_months_item.endTime){
+								endTime = lessons_finishedLessons_months_item.endTime.substring(11,16);
+							}
+							if(lessons_finishedLessons_months_item.startTime){
+								startTime = lessons_finishedLessons_months_item.startTime.substring(0,16);
+							}
+							%>
+							<p>
+								<span><%= startTime%>-<%= endTime%></span>
+							</p>    
+					
+							<div class="pfAndPnf flex">
+							<!--座位顺序-->
+							<%if(lessons_finishedLessons_months_item.studentSeat=="L"){%>
+								<p><span>PF：</span><span class = 'studentName'><%= finishedLessons_months_item.studentName%></span></p>
+								<p><span>PNF：</span><span class = 'pnf'><%= lessons_finishedLessons_months_item.pnf%></span></p>
+								<%}else{%>
+								<p><span>PNF：</span><span class = 'pnf'><%= lessons_finishedLessons_months_item.pnf%></span></p>
+						     	<p><span>PF：</span><span class = 'studentName'><%= finishedLessons_months_item.studentName%></span></p>
+									<%}%>
+							</div>
+							<div class="flex" style="line-height: 43px">
+								<div class = 'skilledLevel width65 textE'><%= finishedLessons_months_item.skilledLevel%></div>
+								<div class="width35 textR"><%= lessons_finishedLessons_months_item.station%></div>
+							</div>
+							<p>
+								<span class = 'lessonType'><%= lessons_finishedLessons_months_item.lessonNo%> ( <%= lessons_finishedLessons_months_item.lessonType%> ) </span>
+							</p>
+						</div>
+					
+					<%})%>
+				
+			<%})%>
+		</li>
+	</ul>
+</div>
+	<%})%>
+<%})%>
+
+
+
+	<%}%>
+</script>

@@ -1,0 +1,70 @@
+<script type = 'text/x-underscore-template' id = 'participationQuery_template'>
+<%
+	if( typeof result !== "undefined" && result !== null && result !== "" && result.length > 0) {
+%>
+
+	<%var name = result[0].months[0].finishedLessons[0].studentName%>
+	<label class="searchLabel fs20"><span class = 'c0'><%= name%><%= lang.participationQueryPosition%><span></label>
+		<div class="dialogdel"><%= lang.cancel%></div>
+			<div id = 'wrapper' class = 'swiper-container'>
+				<div class="searchbody fw swiper-wrapper">
+				<%_.each(result,function(item,index){%>
+				<%_.each(item.months,function(item_months,index_months){%>	
+				<%_.each(item_months.finishedLessons,function(item_months_finishedLessons,index_months_finishedLessons){%>
+					<ul class="queryList c0" data-value = <%= index_months_finishedLessons%>>
+							<li class = 'syc c1'>
+							
+								<span class = 'courseName fs16'><%= item.year%><%= item.courseYearperiod%><%= item_months_finishedLessons.courseName%></span>
+								<img src="../base/img/forward.ing" alt="" width="15px">
+							</li>	
+						<ul class="listItemSide">
+							<%_.each(item_months_finishedLessons.lessons,function(item_months_finishedLessons_lessons,index_months_finishedLessons_lessons){%> 
+							<li class = 'listItem'>
+								<div class="flex fwn flexBorder">
+									<div>
+										<span><%= item_months_finishedLessons_lessons.lessonNo%></span>
+										<span> ( <%= item_months_finishedLessons_lessons.lessonType%> ) </span> 
+									</div>
+									<div class="textE skilledLevel">
+										<%= item_months_finishedLessons.skilledLevel%>
+									</div>
+									<div>
+							<!--判断是否通过0为未通过，1为通过，-1为不显示-->
+							          <% var pass=item_months_finishedLessons_lessons.passed;
+							              if(pass=="0"){
+							              	pass=lang.noPassed
+							              }
+							              if(pass=="1"){
+							              	pass=lang.passed
+							              }
+							              if(pass=="-1"){
+							              	pass="";
+							              }
+							           %>
+										<span><%=pass%></span>
+									</div>
+									<% var startTime = item_months_finishedLessons_lessons.startTime.substring(0,10);%>
+									<div>
+										<%= startTime%>
+									</div>
+									<div>
+										<span><%= item_months_finishedLessons_lessons.station%></span>
+									</div>
+								</div>	
+							</li>
+							<%})%>
+						</ul>
+					</ul>
+
+					<%})%>
+				<%})%>
+			<%})%>
+				</div>
+				<div class = 'outerPagi'>
+						<div class="pagination"></div>
+				</div>		
+			</div>
+
+		<div class = 'showCourse'></div>
+	<%}%>
+</script>

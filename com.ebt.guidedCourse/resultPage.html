@@ -1,0 +1,262 @@
+<style type="text/css" media="all">
+/*put your style here*/
+.courseList{
+	/*margin:0 5%;*/
+	margin:0 2%;
+	/*padding:20px 0;  */
+	/*height:auto;*/
+}
+.title{
+	background: #329dd1;
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.sub_title{
+	text-indent: 1em;
+	/*margin-top: 15px;*/
+	line-height: 30px;
+	padding-top: 20px;
+}
+.sup_title{
+	height:30px;
+	position:relative;
+	/*margin:0 5%;*/
+	/*margin-left:5%;*/
+	padding: 0 40px 0 20px;
+}
+.sup_list{
+	/*position:absolute;*/
+	width:40%;
+	height:100%;
+	/*left:40%;*/
+	line-height: 40px;
+	/*border-radius: 10px;*/
+	float:left;
+}
+.sup_list b{
+	display:inline-block;
+	width:30%;
+	text-align: center;
+	font-weight: normal;
+}
+#wrapper {
+	position: absolute;
+	/*top:10px;*/
+	z-index: 1;
+	width: 100%;
+	height: 632px;
+	overflow: hidden;
+}
+#scroller{
+	/*position: absolute;*/
+	/*top: 10px;*/
+	/*z-index: 1;*/
+	margin:0 2%;
+	/*width: 100%;*/	
+	/*height:1000px;*/
+	height:auto!important;
+}
+.course{
+	height:auto;
+	padding:0 0;
+	background:#FFF;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.template{
+	/*min-height:135px;*/
+	border-top:1px solid #CCC;
+	/*margin-left:5%;*/
+	overflow: auto;
+	padding: 0 40px 0 20px;
+}
+.template:first-child{
+	border-top:none;
+}
+.lesson,.checkElement{
+	/*height:45px;*/
+	height: auto;
+	line-height: 45px;
+	float: left;
+	width: 100%;
+}
+
+.lesson .leLeft b{
+	font-weight: normal;
+}
+.leLeft{
+	width: 40%;
+	float: left;
+	height: auto;
+}
+.leConter{
+	width:18%;
+	position:relative;
+	float:left;
+	height:100%;
+}
+.leConter img{
+	vertical-align: middle;
+	position: relative;
+	left:40%;
+	padding: 10px;
+}
+.leRight{
+	width:40%;
+	float:left;
+	height:100%;
+	height:46px;
+}
+.leRight b{
+	display: inline-block;
+	width:31%;
+	text-align: center;
+}
+.delete,.add,.count{
+	float:left;
+	height:20px!important;
+	border:1px solid #329dd1;
+	line-height: 20px;
+}
+.delete,.add{
+	background-color:#329dd1 ;
+	width:20%;
+	border-top-left-radius: 5px; 
+	border-bottom-left-radius: 5px; 
+	display: inline-block;
+}
+.add{
+	border-radius: 0;
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+	border-left:none;
+}
+.count{
+	width:54%;
+	border-radius: 0!important;
+	padding:0;
+	background-color: #FFF;
+	border-left:none;
+	color:#329dd1;
+	font-weight: normal;
+}
+.checkElement{
+	display: none;
+}
+.checkElement .leLeft b{
+	color:#aeaeb0;
+	display: inline-block;
+	font-weight: normal;
+}
+.score .b{
+	margin:12.5px 0;
+}
+.score{
+	width:100%;
+	height:100%;
+}
+.score,.score>p{
+	position:relative;	
+}
+.score>p{
+	width:31%;
+	height:100%;
+	float:left;
+	text-align:center;
+}
+.question{
+	width:100%;
+	height:45px;
+	background-color: #FFF;
+	margin-top:20px;
+	line-height: 45px;
+	position: relative;
+}
+.easeColor{
+	color:#329dd1;
+}
+.easeColor2{
+	color:#999;
+}
+.addBtn{
+	position: absolute;
+	width: 150px;
+	height: 30px;
+	left: 79%;
+	top: 7px;
+	text-align: center;
+	background:#329dd1;
+	line-height: 30px;
+}
+.redCircle{
+	position: absolute;
+	border: 15px solid red;
+	border-radius: 15px;
+	top: 8px;
+	left: 50%;
+	color: #fff;
+	width: 0px;
+	height: 0px;
+	margin-left: -17px;
+	z-index: 20;
+}
+.score span{
+	position: absolute;
+	z-index: 30;
+	top: 0px;
+	left: 50%;
+	margin-left: -6px;	
+}
+.score>div{
+	width:31%;
+	height:100%;
+	float:left;
+	position:relative;
+}
+.leftTop{
+	margin-left:62px;
+	width:60%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	/*display: block;*/
+}
+
+header>img{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	padding: 18px 24px;
+}
+.rightTop{
+	right: 24px !important;
+}
+</style>
+
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+
+<!-- header -->
+<header class="top-title c1 fs24">
+	<img src = '../base/img/back.ing' class = 'back' >
+	<div class="time leftTop"></div>
+	<div class="time rightTop fs18"><%= lang.pf%><span class = 'pfName'></span>(<span class = 'pnfSkillLevel'></span>) | <%= lang.pnf%><span class = 'pnfName'></span></div>	
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary">
+</nav>
+
+-->
+
+<!-- content -->
+<div class="content">
+	
+</div>
+
+<footer class="footer-menu"></footer>

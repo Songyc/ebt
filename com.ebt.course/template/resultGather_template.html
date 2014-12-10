@@ -1,0 +1,188 @@
+<script id ='resultGather_template' type = 'text/x-underscore-template'>
+<p class="c0 fs16 item_title"><%=lang.gradeList%></p>
+<div class="scorelist">
+<div class="sub_top textC">
+	<div class="score_type c1 flex">
+		<div class="width40"></div>
+		<div class="width40 flex">
+		     <%if(lessonNo==1){%>
+		     <div><%=lang.estimateScore%></div>
+	       	<%}%>
+			<div><%=lang.gradeResult%></div>
+			<%if(lessonNo==1||lessonNo==2){%>
+			<div><%=lang.repeatTimes%></div>
+			<%}%>
+		</div>
+		<div class="width20"></div>
+	</div>
+</div>
+<% 
+if(typeof seqs !== "undefined" && seqs !== null && seqs !== "" && seqs.length !== 0) {
+	     // 定义备注数组
+		var remarkArr=[];
+	     // 定义评分标准数组
+		var markArr=[];
+%>
+<div class="sub_list">
+<%
+// 大类
+_.each(seqs,function(seqs_item,index){
+// 检查要素
+_.each(seqs_item.subjects,function(item,index){
+%>
+<div class="sub_item fs16" data-subjectId='<%=item.subjectId%>'>
+	<div class="sub_item_title flex ">
+	   <div class="width40 "><%=item.subjectName%></div>
+	  <div class="width40 flex textC">
+	   <%if(lessonNo==1){%>
+	    <p class="estAver"></p>
+	   <%}%>
+	    <p class="scoreAver"></p>
+	    <%if(lessonNo==1||lessonNo==2){%>
+	    <p class="repeatAver"></p>
+	     <%}%>
+	  </div>
+	  <div class="width20 textC sub_title_pic">
+	   <img src="../base/img/toggleDown.ing" width="25px" alt="" class="toggleDown">
+	   <img src="../base/img/toggleUp.ing"  width="25px" alt="" class="toggleUp">
+	  </div>
+
+	</div>
+	<div class="itemCantain">	
+<%
+// 右边检查项
+_.each(item.ratms,function(ratm_item,index){
+	// 获取红色项分数值
+	// #fff100
+	var proScoresArr=[];
+	var redscore="",yellowscore="";
+	_.each(ratm_item.scores,function(score_item,index){
+       if(score_item.color=="#f00"){
+            redscore=score_item.score;
+       }
+       if(score_item.color=="#fff100"){
+            yellowscore=score_item.score;
+       }
+       if(!score_item.remark){
+       	score_item.remark="";
+       }
+       markArr.push(score_item.remark)
+	});
+	// 存在问题分数数组
+      if(redscore){
+      	proScoresArr.push(redscore);
+      }
+      if(yellowscore){
+      	proScoresArr.push(yellowscore);
+      }
+      // 存在问题检查项
+	if(redscore==ratm_item.scoreValue||yellowscore==ratm_item.scoreValue){
+		var itemObj={"name":ratm_item.name,"id":ratm_item.ratmId}
+		remarkArr.push(itemObj);
+	}
+	var scoresStr=JSON.stringify(ratm_item.scores);
+	markArrStr=JSON.stringify(markArr);
+	var repeatTime=ratm_item.repeat?ratm_item.repeat:"0";
+	%>
+				<div class="score_item flex editCoreDetail disNone" data-rtamId='<%=ratm_item.ratmId%>'  data-scoreranges='<%=ratm_item.scoreranges%>' data-warnScore='<%=redscore%>'  data-mark='<%=markArrStr%>'  data-scoreArr='<%=scoresStr%>'>
+					<div class="width40 rtamName" data-name='<%=ratm_item.name%>'><%=ratm_item.name%></div>
+					<div class="width40 flex textC c2">
+						<div class="sub_item_detail estimateItem">
+							<span class="score_pre ">&lt;</span>
+							<span class="score estimate" data-value='<%=ratm_item.estimateValue%>' data-estimate='<%=ratm_item.estimate%>'><%=ratm_item.estimateValue%></span>
+							<span class="score_next ">&gt;</span>
+						</div>
+						<div class="sub_item_detail scoreItem">
+							<span class="score_pre ">&lt;</span>
+							<span class="score scoreValue" data-value='<%=ratm_item.scoreValue%>' data-scoreid='<%=ratm_item.scoreId%>' ><%=ratm_item.scoreValue%></span>
+							<span class="score_next ">&gt;</span>
+						</div>
+						<div class="sub_item_detail repeatItem">
+							<span class="score_pre ">&lt;</span>
+							<span class="score repeat" data-value='<%=repeatTime%>'><%=repeatTime%></span>
+							<span class="score_next ">&gt;</span>
+						</div>
+					</div>
+					<div class="width20"></div>
+					<%if(ratm_item.remark){%>
+					    <div class="remark"  data-remark='<%=ratm_item.remark%>'>
+						   <img src="../base/img/editRemark.ing" alt="">
+					    </div>
+				    <%}else{%>
+				        <div class="remark disNone"  data-remark='<%=ratm_item.remark%>'>
+						   <img src="../base/img/editRemark.ing" alt="">
+					    </div>
+
+				    	<%}%>
+				</div>
+				<div class="score_item flex showCoreDetail"  data-rtamId='<%=ratm_item.ratmId%>' data-scoreArr='<%=scoresStr%>' >
+					<div class="width40 rtamName" data-name='<%=ratm_item.name%>'><%=ratm_item.name%></div>
+					<div class="width40 flex textC ">
+					    <%if(lessonNo==1){%>
+						<div class="score estimate" data-value='<%=ratm_item.estimateValue%>' data-estimate='<%=ratm_item.estimate%>'><%=ratm_item.estimateValue%></div>
+						<%}%>
+						<%if(redscore==ratm_item.scoreValue){%>
+						<div class="score scoreValue" data-value='<%=ratm_item.scoreValue%>' data-scoreid='<%=ratm_item.scoreId%>' >
+						   <span id="lhscore" ><%=ratm_item.scoreValue%></span>
+						</div>
+							<%}else{%>
+						<div class="score scoreValue" data-value='<%=ratm_item.scoreValue%>' data-scoreid='<%=ratm_item.scoreId%>' >
+						   <span><%=ratm_item.scoreValue%></span>
+						</div>
+                        <%}%>
+					  <%if(lessonNo==1||lessonNo==2){%>
+						 <div class="score repeat" data-value=<%=ratm_item.repeat%> style="visibility:hidden"><%=ratm_item.repeat%></div>
+						<%}%>
+					</div>
+					<div class="width20"></div>
+					<%if(ratm_item.remark){%>
+					    <div class="remark"  data-remark='<%=ratm_item.remark%>'>
+						   <img src="../base/img/editRemark.ing" alt="">
+					    </div>
+				    <%}else{%>
+				        <div class="remark disNone"  data-remark='<%=ratm_item.remark%>'>
+						   <img src="../base/img/editRemark.ing" alt="">
+					    </div>
+				    	<%}%>
+				</div>
+	 <%})%>
+  </div>
+  </div>
+<%})%>
+<%})%>
+</div>
+</div>
+<%} 
+		var remarkArrObj=JSON.stringify(remarkArr)
+		// console.log(remarkArrObj);
+%>
+<!--存在问题-->
+<% if(typeof remarkArr !== "undefined" && remarkArr !== null && remarkArr !== "" && remarkArr.length !== 0) {%>
+<div class="problem" data-problem='<%=remarkArrObj%>'>
+<p class="c2 item_title"><%=lang.exsitProblem%></p>
+<div class="problem_list">
+<%_.each(remarkArr,function(item,index){%>
+     <p><%=item.name%></p>
+	<%})%>
+</div>
+</div>
+<%}%>
+<div class="otherinfo">
+<p class="item_title"><%=lang.otherInfo%></p>
+<%if(typeof otherInfo !== "undefined" && otherInfo !== null && otherInfo !== "" && otherInfo.length !== 0){%>
+	<textarea class="improve_text" readonly="readonly"><%=otherInfo%></textarea>
+	<%}else{%>
+		<textarea class="improve_text" readonly="readonly"></textarea>
+<%}%>
+
+</div>
+<div class="improve">
+<p class="item_title"><%=lang.improve%></p>
+<%if(typeof common !== "undefined" && common !== null && common !== "" && common.length !== 0){%>
+	<textarea class="improve_text" readonly="readonly"><%=common%></textarea>
+	<%}else{%>
+		<textarea class="improve_text" readonly="readonly"></textarea>
+<%}%>
+
+</div>
+</script>

@@ -1,0 +1,34 @@
+{
+	"resultCode": 0,
+	"resultMsg": "调用成功",
+	"result": [{
+		"courseId": "",
+		"courseType": "检查",
+		"courseName": "ERJ190机型复训课程",
+		"actype": "ERJ190机型",
+		"courseYear": "2014年",
+		"courseYearperiod": "上半年",
+		"courseHours": "",
+		"skilledLevel": "",
+		"skilledExamRef": "",
+		"referMaterial": "",
+		"lessons": [{
+			"lessonNo": 1,
+			"seqs": [{
+				"subjects": [{
+					"subjectId": "",
+					"subjectName": "正常驾驶舱准备，气象雷达测试",
+					"ratms": [{
+						"ratmId":"",
+						"name":"进行航前检查和驾驶舱准备",
+						"color":"",
+						"score":"",
+						"repeat":"",
+						"remark":""
+					}]
+				}]
+			}]
+		}]
+
+	}]
+}

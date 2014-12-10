@@ -1,0 +1,32 @@
+define({
+	"root": {
+		"about":"关于",
+		"request_timeout": "请求超时!",
+		"request_fail": "请求出错，请稍后尝试!",
+		"system_error": "系统错误!",
+		"no_roles":"用户无登录权限",
+		"tip": " 请稍后尝试!",
+		"logout_fail": "注销失败",
+		"autoRefreshTip": "当前使用的2G/3G流量，系统将不自动刷新‘我的工作 ’页面",
+		"network_not_available": "当前网络不可用，请稍后尝试！",
+		"session_timeout": "当前会话已过期，请重新登录!",
+		"alert": "提示",
+		"ok": "确定",
+		"download_fail": "下载失败，请稍后尝试!",
+		"download_course_tip": "请先下载课程！",
+		"search_course_tip": "对不起，没有搜索到该课程!",
+		"stuPF_empty_tip": "学员PF不能为空！",
+		"stuPNF_empty_tip": "学员PNF不能为空！",
+		"name_empty_tip": "姓名不能为空!",
+		"course_feedBack_success": "课程反馈成功!",
+		"course_feedBack_fail": "对不起，课程反馈失败!",
+		"course_complaint_feedBack_success": "课程反馈成功!",
+		"course_complaint_feedBack_fail": "对不起，课程反馈失败!",
+		"no_statistical_data":"对不起，该项暂无统计数据！",
+		"no_training_result_info":"对不起，您暂无训练能力结果信息！",
+		"no_trainer_result_info":"对不起，没有搜索到该学员的参训信息",
+		"no_data":"对不起，没有数据"
+	},
+	"en-us": true,
+	"zh-CN": true
+});

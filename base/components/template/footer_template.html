@@ -1,0 +1,37 @@
+<script id="footer_template" type="text/x-underscore-template">
+  <%
+    i = 0;
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+      _.each(result,function(userItem,index){
+         if(userItem.accountId==Piece.Session.loadObject('accountId')){
+            i++;
+         }
+   });
+         if(i==1){  
+          _.each(result,function(userItem,index){
+              if(userItem.accountId==Piece.Session.loadObject('accountId')){%>
+
+
+<p class="footer_info c0 fs16"><%=userItem.name%> （<%=userItem.companyName%>/<!--<%=result.actype%>机型--><%=userItem.orgName%>）</p>
+<p class="footer_icon textR">
+<span class="footer_icon_home" data-value="icon_home"></span>
+<span class="footer_icon_info" data-value="icon_info"></span>
+<span class="footer_icon_exit" data-value="icon_exit"></span>
+</p>
+                
+          <%    }
+
+          });
+          }else{%>
+
+<p class="footer_info c0 fs16"><%=result.name%> （<%=result.companyName%>/<!--<%=result.actype%>机型--><%=result.orgName%>）</p>
+<p class="footer_icon textR">
+<span class="footer_icon_home" data-value="icon_home"></span>
+<span class="footer_icon_info" data-value="icon_info"></span>
+<span class="footer_icon_exit" data-value="icon_exit"></span>
+</p>
+
+        <%  }
+}%>
+</script>
+  

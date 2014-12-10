@@ -1,0 +1,163 @@
+<script id = 'coursePage_template' type = 'text/x-underscore-template'>
+<% 
+if(typeof seqs !== "undefined" && seqs !== null && seqs !== "" && seqs.length !== 0) {
+%>
+  <aside class="course_aside fs20">
+	<div class="aside_title fw">
+	<div class="leftinfo">
+	    <img src="../base/img/backa.ing" alt="" class="back">
+		<span class="courseInfo c0"></span>
+	</div>
+	<div class="studenttype"></div>
+   </div>
+	<div id="subject_wrapper">
+	<div id="subject_scroller">
+		<!-- 菜单序号start -->
+		<!-- 第一个seqs的第一个subject高亮 -->
+	<%
+	_.each(seqs,function(menuItem,index){
+		%>
+		<ul data-value=<%=index+1%> class="ul_subject">
+		<%_.each(menuItem.subjects,function(subitem,sub_index){
+			   if(index==0&&sub_index==0){%>
+				<li class="active cD" data-value='<%=subitem.subjectId%>' data-checked='<%=subitem.checked%>'>
+				<%}else{%>
+				<li data-value='<%=subitem.subjectId%>' data-checked='<%=subitem.checked%>'>
+				<%}%>
+			   <%if(sub_index==0){%>
+			   <div class="sub_num fs42">
+			        <%=menuItem.seq%>
+			     </div>
+				<%}%>
+                   <%=subitem.subjectName%>
+                 </li>
+       <%})%>
+		</ul>
+
+		<%});
+	%>
+		<!-- 菜单序号end -->
+	</div>
+	</div>
+  </aside>
+
+<div class="main fs20">
+<div id="wrapper">
+<%
+_.each(seqs,function(seqs_item,index){
+%>
+<!--seqs start-->
+  <div class="sequence" id=sequence<%=index+1%>>
+   <!-- 科目start -->
+        <%
+_.each(seqs_item.subjects,function(subject_item,index){
+	// 设置重复次数
+	//默认为0
+	var repeat=0;
+	if(subject_item.repeat){
+		repeat=subject_item.repeat;
+	}
+%>
+ <!-- rtam start -->
+<div class="sub sub<%=subject_item.subjectId%>" data-value='<%=subject_item.subjectId%>' data-checked='<%=subject_item.checked%>'>
+<!-- sub_label -->
+<div class="sub_label c0 fs22 fw">
+<div class="label_title"><%=subject_item.subjectName%></div>
+<div class="repTime">
+<%if(lessonNo==1||lessonNo==2){%>
+	<div class="repeat_item flex" data-value=<%=repeat%>>
+		<div class="repeat_mess"><%=lang.repeatTimes%></div>
+			       <div class="sub_item_detail_score c2">
+				        <span class="repeat_pre">&lt;</span>
+						<span class="score"><%=repeat%></span>
+						<span class="repeat_next">&gt;</span>
+					</div>
+	</div>
+<%}%>
+</div>
+</div>
+<!-- sub_label end-->
+<!--iscroll 滑动-->
+<div id='wrapper<%=subject_item.subjectId%>'>
+<div id='scroll<%=subject_item.subjectId%>'>
+
+<%
+// 右边检查项
+_.each(subject_item.ratms,function(ratm_item,index){
+	// 设置默认分数(目前被移除)
+   var defaultScoreValue=4;
+   var defaultScoreid=0;
+   var defaultScoreColor=0;
+_.each(ratm_item.scores,function(score_item,index){
+	if(score_item.score==defaultScoreValue){
+		defaultScoreid=score_item.scoreId;
+		defaultScoreColor=score_item.color;
+	}
+	});
+	var scorId=ratm_item.scoreId?ratm_item.scoreId:"";
+	var scoreValue=ratm_item.scoreValue?ratm_item.scoreValue:"";
+	var estimate=ratm_item.estimate?ratm_item.estimate:"";
+	var estimateValue=ratm_item.estimateValue?ratm_item.estimateValue:"";
+	var scoreColor=ratm_item.scoreColor?ratm_item.scoreColor:"";
+	// 设置重复次数end
+	%>	
+		<div class="sub_item" data-value='<%=ratm_item.ratmId%>'>
+			<div class="sub_item_title"><%=ratm_item.name%></div>
+			<!--评分标准--> 
+			<div class="sub_item_scoreStandard"></div>
+			<div class="sub_item_detail">
+			<!--如果为第一课时则显示预评估分-->
+			<%if(lessonNo==1){%>
+			     <div class="grade_item scoreNum flex flL" data-scoreid='<%=estimate%>' data-value='<%=estimateValue%>' >
+					<div><%=lang.estimateScore1%></div>
+						<div class="sub_item_detail_score chooseScore c2">
+						<!-- 设置active项-->
+						<%_.each(ratm_item.scores,function(score_item,index){%>
+							<%if(score_item.score==estimateValue){%>
+								<span class="active" data-scoreid='<%=score_item.scoreId%>' data-color='<%=score_item.color%>' ><%=score_item.score%></span>
+								<%}else{%>
+                                 <span data-scoreid='<%=score_item.scoreId%>' data-color='<%=score_item.color%>'><%=score_item.score%></span>
+									<%}%>
+							<%})%>
+						<!-- 设置active项 end-->
+					</div>
+				</div>
+           <%}%>
+				<div class="score_item scoreNum flex flR" data-scoreid='<%=scorId%>' data-value='<%=scoreValue%>'>
+					<div><%=lang.gradeResult%></div>
+						<div class="sub_item_detail_score chooseScore c2">
+						<!-- 设置active项-->
+						<%_.each(ratm_item.scores,function(score_item,index){%>
+							<%if(score_item.score==scoreValue){%>
+								<span class="active" data-scoreid='<%=score_item.scoreId%>'  data-remark='<%=score_item.remark%>'  data-color='<%=score_item.color%>'><%=score_item.score%></span>
+								<%}else{%>
+                                 <span data-scoreid='<%=score_item.scoreId%>'   data-remark='<%=score_item.remark%>' data-color='<%=score_item.color%>'><%=score_item.score%></span>
+									<%}%>
+							<%})%>
+						<!-- 设置active项 end-->
+					</div>
+		<!--判断是否显示备注项-->
+			<%if(ratm_item.remark){%>
+			<div class="remark c2" data-remark='<%=ratm_item.remark%>'><!--<%=lang.edit_remark%>--><img src="../base/img/editRemark.ing" alt=""></div>
+			<%}else{%>
+			<div class="remark c2 disNone" data-remark='<%=ratm_item.remark%>'><img src="../base/img/editRemark.ing" alt=""></div>
+				<%}%>
+
+
+				</div>
+		  </div>
+	 </div>
+	 <%})%>
+</div>
+</div>
+</div>
+<!-- rtam end-->
+  <%})%>
+<!-- subject end-->
+</div>
+<%})%>
+<!-- seqs end-->
+</div>
+</div>
+<%}%>
+</script>

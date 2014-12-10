@@ -1,0 +1,512 @@
+/* *  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet */
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	background: url(../img/bg.ing) no-repeat 0 0;
+	background-size: 100% 748px;
+	height: 748px !important;
+	width: 100%;
+	padding: 0;
+	font-family: 微软雅黑, 幼圆, 宋体, HelveticaNeue, DroidSansFallback;
+	font-size: 1.6rem;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block
+}
+nav ul {
+	list-style: none
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+hr {
+	display: block;
+	height: 1px;
+	border: none;
+	border-top: 1px solid #ccc;
+	margin: 0;
+	padding: 0
+}
+input, select {
+	vertical-align: middle
+}
+
+/* common css */
+/* 字体大小 */
+.fs12 {
+	font-size: 1.2rem
+}
+.fs14 {
+	font-size: 1.4rem
+}
+.fs16 {
+	font-size: 1.6rem
+}
+.fs18 {
+	font-size: 1.8rem
+}
+.fs20 {
+	font-size: 2.0rem
+}
+.fs22 {
+	font-size: 2.2rem
+}
+.fs24 {
+	font-size: 2.4rem
+}
+.fs26 {
+	font-size: 2.6rem
+}
+.fs28 {
+	font-size: 2.8rem
+}
+.fs30 {
+	font-size: 3.0rem
+}
+.fs32 {
+	font-size: 3.2rem
+}
+.fs34 {
+	font-size: 3.4rem
+}
+.fs42 {
+	font-size: 4.2rem
+}
+.fw {
+	font-weight: bold;
+}
+.fwn {
+	font-weight: normal;
+}
+
+/* 宽度单位 */
+.width10 {
+	width: 10%
+}
+.width15 {
+	width: 15%
+}
+.width20 {
+	width: 20%
+}
+.width25 {
+	width: 25%
+}
+.width30 {
+	width: 30%
+}
+.width35 {
+	width: 35%
+}
+.width40 {
+	width: 40%
+}
+.width45 {
+	width: 45%
+}
+.width50 {
+	width: 50%
+}
+.width55 {
+	width: 55%
+}
+.width60 {
+	width: 60%
+}
+.width65 {
+	width: 65%
+}
+.width70 {
+	width: 70%
+}
+.width75 {
+	width: 75%
+}
+.width80 {
+	width: 80%
+}
+.width85 {
+	width: 85%
+}
+
+/* 浮动 */
+.fL {
+	float: left;
+}
+.fR {
+	float: right;
+}
+
+/* 颜色值 */
+.c0 {
+	color: #000; 	
+}
+.c1 {
+	color: #fff;	
+}
+.c2 {
+	color: #339cd3;
+}
+.c3 {
+	color: #333
+}
+.c6 {
+	color: #666;
+}
+.cUD{
+	color: #939498;
+}
+.cD{
+	color:#d1d2d4 !important;
+}
+/* 字体排版 */
+.textC {
+	text-align: center;
+}
+.textL {
+	text-align: left;
+}
+.textR {
+	text-align: right;
+}
+.textE{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 百分比布局 */
+.flex {
+	display: -webkit-box;
+	display: box;
+	-webkit-box-orient: horizontal;
+}
+.flex>div, .flex>p, .flex>li {
+	-webkit-box-flex: 1.0;
+	box-flex: 1.0;
+}
+
+/* body and content style */
+/* *input style */
+input:focus, select:focus {
+	color: #fff
+}
+input[type="tel"], input[type="password"], input[type="text"], input[type="search"] {
+	color: #fff;
+	margin: 0;
+	padding-left: 10px;
+	border-radius: 0;
+	border: none;
+}
+input[type="tel"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+	color: #fff;
+	font-size: 1.2rem
+}
+.subbtn {
+	background: -webkit-linear-gradient(top, #d2eef4, #dff0f4);
+	height: 40px;
+	line-height: 40px;
+	margin-top: 15px;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px #666;
+}
+
+/* content css */
+.page {
+	height: 748px;
+	position: relative;
+}
+.content {
+	background: transparent;
+	height: 648px;
+	width: 100%;
+	padding: 0;
+	position: relative;
+}
+
+/* *
+* nav for top bar */
+nav.bar-top {
+	height: 45px;
+	padding: 0;
+	background-color: #dcdcdc;
+	position: relative;
+	top: 0;
+	background: -webkit-linear-gradient(top, #dcdcdc, #dcdcdc 95%, #cdcdcd);
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.segmented-controller {
+	height: 45px;
+	text-shadow: none;
+	box-shadow: none;
+	font-weight: normal;
+	font-size: 1.4rem;
+	background-color: #dcdcdc;
+	border: none !important;
+	background-image: -webkit-linear-gradient(top, #dcdcdc, #dcdcdc 95%, #cdcdcd);
+}
+.segmented-controller li {
+	border: none;
+	box-shadow: none;
+}
+.segmented-controller li>a {
+	color: #999;
+	padding: 15px 0 !important;
+	line-height: 16px !important;
+	font-size: 1.4rem;
+}
+.segmented-controller li.active {
+	background-color: #eee;
+	box-shadow: none;
+}
+.segmented-controller li.active>a {
+	color: #0294d6;
+}
+
+/* list style */
+.list {
+	background-color: transparent;
+}
+.list li {
+	padding: 10px 15px;
+	margin: 10px 0;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* *
+* common header, include title and return icon for left */
+.leftTop, .rightTop {
+	position: absolute;
+	top: 0
+}
+.leftTop {
+	left: 0;
+	font-weight: normal !important;
+}
+.rightTop {
+	right: 20px;
+}
+.edit,.refresh, .search, .bookmarks {
+	display: inline-block;
+	padding: 0 10px;
+}
+.rightTop img {
+	margin-top: 16px;
+}
+.top-title {
+	width: 100%;
+	height: 59px;
+	/* background: rgba(0, 44, 88, 0.5);
+	*/
+	background: #FEFEFE;
+	overflow: hidden;
+	position: relative;
+	border-bottom: #CCCCCC 1px solid;
+	color: #000000 !important;
+}
+.rightTop, .leftTop, .top-title .title {
+	height: 100%;
+	line-height: 60px;
+}
+.butIcon {
+	padding: 5px;
+	height: 20px;
+	width: 20px;
+	display: block;
+	position: absolute;
+	z-index: 10;
+}
+.butIcon>img {
+	width: 100%;
+	height: 100%
+}
+.backButton {
+	left: 10px;
+	top: 10px;
+}
+.forwardButton {
+	right: 10px;
+	top: 10px;
+}
+
+/* 离右边的距离 */
+.toRight {
+	margin-right: 15px
+}
+
+/* 弹出框修改 */
+/* ----------------------------------------------------- */
+.cube-loader-mask {
+	width: 1100%;
+	height: 1100%;
+	left: -400%;
+	top: -400%;
+	background-color: #444;
+	opacity: 0;
+	position: fixed;
+	z-index: 999 !important;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective: 1000;
+}
+.cube-ebt-loader {
+	min-height: 40px;
+	height: 90px;
+	width: 90px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	background-image: none;
+	background-size: 250px 140px;
+	background-position: center;
+	margin-left: -45px;
+	margin-top: -50px;
+	color: #999;
+	font-weight: bolder;
+	position: fixed;
+	z-index: 1000 !important;
+	left: 50%;
+	top: 40%;
+}
+@keyframes warning {
+	0% {
+		text-shadow: 0px 0px 4px #000000;
+	}
+	50% {
+		text-shadow: 0 0 40px #000000;
+	}
+	100% {
+		text-shadow: 0 0 4px #000000;
+	}
+}
+@-webkit-keyframes wobble {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes wobble {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+.cube-ebt-loading {
+	padding-left: 0;
+	margin-left: 15px;
+	margin-top: 15px;
+	height: 60px;
+	width: 60px;
+	-webkit-animation: wobble 1.5s linear infinite;
+	animation: wobble 1.5s linear infinite;
+}
+.cube-flight-loader-cancel {
+	position: relative;
+	top: -10px;
+}
+.cube-flight-loader-cancel img {
+	position: absolute;
+	float: right;
+	margin-right: 0px;
+	margin-top: 0px;
+	height: 30px;
+	width: 30px;
+}
+.cube-loader-text {
+	left: 30%;
+	top: 40%;
+	position: absolute;
+	margin-top: 37px;
+	margin-left: -23px;
+	color: transparent;
+	font: 16px/1.25 "Helvetica Neue", sans-serif;
+	font-size: 1.6rem;
+}
+
+/* 左侧课程aside */
+.course_aside {
+	position: absolute;
+	top: 60px;
+	bottom: 40px;
+	left: 0;
+	display: inline-block;
+	width: 34%;
+	min-width: 100px;
+	background: #fff;
+	border-right:1px solid #d1d2d4;
+	-webkit-box-sizing:border-box;
+
+}
+.aside_title {
+	font-size: 5.4rem;
+	min-height: 75px;
+	line-height: 74px;
+}
+.course_aside li {
+	color: #333;
+	border-bottom: 1px solid #e8e8ea;
+	padding:20px 0 20px 70px;
+	position: relative;
+}
+.course_aside li.active {
+	border-top: 1px solid #ECB034;
+	color: #fff !important;
+	background: -webkit-linear-gradient(left, #E99417 20%, #B54E09 100%);
+	background: linear-gradient(left, #E99417 20%, #B54E09 100%);
+}
+.course_aside li .sub_num{
+	position: absolute;
+	left:20px;
+	top:50%;
+	margin-top:-24px; 
+}
+/* 弹出层样式 */
+.masker {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9;
+	background: rgba(0, 0, 0, 0.3);
+	display: none;
+}
+
+/* ===============================查询不到数据公共样式================================== */
+.noResultWarn {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	font-size: 3rem;
+	text-align: center;
+	top: 35%;
+	font-weight: bold;
+	color: #CDC9C9;
+	z-index: 1;
+}

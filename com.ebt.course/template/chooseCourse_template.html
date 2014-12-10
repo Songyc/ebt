@@ -1,0 +1,69 @@
+<script id="chooseCourse_template" type="text/x-underscore-template">
+<%
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+  %>
+
+     <header class="top-title c1">
+        <div class="time leftTop">
+		<img src="../base/img/back.ing" alt="">
+		</div>
+
+		<h1 class="title textC fs24">
+		<%=result.courseYear%><%=result.courseYearperiod%>  <%=result.actype%><%=lang.acType%><%=result.courseType%><%=lang.course%>
+		</h1>
+	 </header>
+
+	 <div class="content">
+	    <div class="courseMain flex c1 textC fs22">
+			<!--课程的课时列表start-->
+			<%
+			if(typeof result.lessons !== "undefined" && result.lessons !== null && result.lessons !== "" && result.lessons.length !== 0){
+
+				var lessonImgArr = [];
+
+			_.each(result.lessons,function(lessonItem,index){%>
+			<div class="course_item" data-value=<%=lessonItem.lessonId%> lesson-no=<%=lessonItem.lessonNo%> lesson-type=<%=lessonItem.lessonType%>>
+
+			<div>
+			<%if($.trim(lessonItem.lessonType)==lang.check){
+				%>
+			 	<div class="course_item_img check"></div>
+			<% 
+			lessonImgArr.push("check");
+		    }else if(index===0 &&　$.trim(lessonItem.lessonType)==lang.train){%>
+				<div class="course_item_img train1"></div>
+ 			<%
+			lessonImgArr.push("train1");
+ 			}else if(index===1 &&　$.trim(lessonItem.lessonType)==lang.train){
+ 				if(_.contains(lessonImgArr,"train1")){%>
+ 					<div class="course_item_img train2"></div>
+ 				<%lessonImgArr.push("train2");}else{%>
+ 					<div class="course_item_img train1"></div>
+ 				<%lessonImgArr.push("train1");}
+ 				%>
+ 			<%}else if(index===2 && $.trim(lessonItem.lessonType)==lang.train){
+ 				if(_.contains(lessonImgArr,"train1")&&!_.contains(lessonImgArr,"train2")){%>
+ 					<div class="course_item_img train2"></div>
+ 				<%lessonImgArr.push("train2");}else if(_.contains(lessonImgArr,"train1")&&_.contains(lessonImgArr,"train2")){%>
+ 					<div class="course_item_img train2"></div>
+ 			<%lessonImgArr.push("train2");}else if(!_.contains(lessonImgArr,"train1")){%>
+					<div class="course_item_img train1"></div>
+ 		   <%lessonImgArr.push("train1");}
+ 		   }%>
+			     <div class="course_item_lessonNo c1 fs18 textC"><%=lang[lessonItem.lessonNo]%>（<%=$.trim(lessonItem.lessonType)%>）
+			     </div>
+			</div>
+					
+			</div>
+			<%});		
+		}else{
+			$(".noCourseTip").show();
+		}%>
+			<!--课程的课时列表end-->
+      	</div>
+     </div>
+
+
+	
+<%}%>	
+</script>

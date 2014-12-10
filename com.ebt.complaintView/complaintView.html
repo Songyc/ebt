@@ -1,0 +1,221 @@
+<style type="text/css" media="all">
+/*put your style here*/
+.complaintList{
+	position: relative;
+	margin: 100px auto;
+	z-index:10;
+	/*border:#2ca6e0 2px solid;
+	border-radius: 15px;*/
+	/*background-color: #FFFFFF;*/
+	/*box-shadow: -1px -1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;*/
+	/*padding-left: 30px;*/
+}
+.swiper-container{
+	overflow: hidden;
+	width:550px;
+	height:214px;
+	position: relative;
+	z-index:10;
+}
+.swiper-wrapper{
+	position: relative;
+	height:auto!important;
+	/*margin:40px 85px 0 85px;*/
+	/*background-color: #FFFFFF;*/
+	/*height:214px!important;*/
+}
+.swiper-slide{
+	padding-left: 30px;
+	/*padding-right: 2px;
+	box-shadow: -1px -1px 1px #FFFFFF, 1px 1px 1px #FFFFFF;*/
+	border:#2ca6e0 2px solid;
+	border-radius: 15px;
+	width: 516px!important;
+	height:auto!important;
+	/*margin-right: 2px;*/
+	/*height:214px!important;*/
+	background: #fff;
+}
+.content>div{
+	height:auto;
+}
+.complaintItem{
+	position: relative;
+	border-bottom: #E2DCDC 2px solid;
+	height:70px;
+	line-height: 70px;
+}
+.complaintItem:last-child{
+	border-bottom:none;
+}
+.complaintItem span{
+	display:inline-block;
+	width:85%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+.checkForward{
+	position: absolute;
+	width:22px;
+	height:65px;
+	right: 0;
+	top:0;
+	/*padding: 5px 22px 0px 22px;*/
+}
+.complaintItem>span{
+	margin-right: 12px;
+}
+.complaintItem>span:nth-child(3){
+	margin-right: 0 !important;
+} 
+header img{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	padding: 18px 24px;
+}
+.checkForward img{
+	position:absolute;
+	top: 11px;
+	right: 24%;
+	width: 14px;
+	height: 24px;
+	padding: 15px;
+}
+.swiper-pagination-switch {	
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  margin-right: 5px;
+  margin-left:15px;
+  padding: 1px;
+  border: 1px solid #0216FF
+}
+.swiper-active-switch {
+  background: #0216FF;
+}
+.pagination{
+	margin:0 auto;
+}
+h1{
+	font-weight: normal;
+}
+.outerPagi{
+	width: 100%;
+	height: 30px;
+	margin-top: 43%;
+}
+.dialog {
+	width: 500px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	z-index: 99;
+	margin-left: -250px;
+	background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+	display: none;
+	border-radius: 10px;
+}
+.dialogLabel {
+	border-bottom: 2px solid #D0D0D0;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	display: block;
+	color:#000;
+	/*font-weight:bold;*/
+	height:50px;
+}
+.dialogDetail {
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px 20px;
+	margin: 20px 10px 0;
+}
+.dialogDetail>div {
+	display: -webkit-box; /* Safari and Chrome */
+	display: -ms-flexbox; /* Internet Explorer 10 */
+	display: box;
+	-webkit-box-orient: horizontal;
+	margin-top:10px;
+}
+.dialogDetail>div>div:first-child {
+	width: 30%
+}
+.dialogDetail>div>div:last-child {
+	width: 70%
+}
+.dialogDetail>div>div {
+	-webkit-box-flex: 1.0; /* Safari and Chrome */
+	-ms-flex: 1.0; /* Internet Explorer 10 */
+	box-flex: 1.0;
+}
+select {
+	background: none;
+	border: 1px solid #818181;
+	color: #000;
+}
+select option {
+	color: #000;
+}
+.twoItem select {
+	float: left;
+	width: 48%;
+}
+.twoItem select:last-child {
+	margin-left: 4%
+}
+/*.dialogdel{position: absolute;right:5px;top:0;}*/
+.dialogdel {
+	position: absolute;
+	right: 21px;
+	top: 0px;	
+	color: rgb(40, 135, 218);
+	cursor:pointer;
+}
+.dailogFoot{margin-top:20px;background:#818181;height: auto;overflow: hidden;}
+
+.dialogDetail input{height:25px;border:1px solid #000;border-radius:5px}
+.dialogDetail p{
+	margin:10px 0 25px 0;
+	word-break: break-word;
+}
+.dialogList{
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.content{
+	z-index: 8;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+
+<!-- header -->
+<header class="top-title c1 fs24">
+	<img src = '../base/img/back.ing'>
+	<h1 class="title textC"><%= lang.complaintView%></h1>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+<div class="content">
+
+</div>
+<div class="dialogList">
+	
+</div>
+
+<!-- 遮罩层 -->
+<div class="masker"></div>
+<footer class="footer-menu"></footer>

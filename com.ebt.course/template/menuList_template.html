@@ -1,0 +1,101 @@
+<script id="menuList_template" type="text/x-underscore-template">
+  <%
+    if(typeof Menu !== "undefined" && Menu !== null && Menu !== "" && Menu.length !== 0) {
+      var menuArr = Piece.Session.loadObject('menus');
+  %>
+
+<!--UPLOAD start-->
+     <% if(_.contains(menuArr,'UPLOAD')){%>
+
+          <div class="menuItem lh38" data-value=<%=Menu.UPLOAD.url%>>
+          <div class="waitUploadCounter fs16"></div>
+             <%=Menu.UPLOAD.value%>
+          </div>
+
+      <%
+      }
+      %>
+<!--UPLOAD end--> 
+
+
+<!--UNFINISHED start-->
+     <% if(_.contains(menuArr,'UNFINISHED')){%>
+
+          <div class="menuItem lh38" data-value=<%=Menu.UNFINISHED.url%>>
+          <div class="waitCompletionCounter fs16"></div>
+           <%=Menu.UNFINISHED.value%>
+          </div>
+
+      <%
+      }
+      %>
+<!--UNFINISHED end-->      
+
+<!--FINISHED_COURSE start-->
+     <% if(_.contains(menuArr,'FINISHED_COURSE')){%>
+
+          <div class="menuItem lh19" data-value=<%=Menu.FINISHED_COURSE.url%>>
+             <%=Menu.FINISHED_COURSE.value%>
+          </div>
+
+      <%
+      }
+      %>
+<!--FINISHED_COURSE end-->  
+
+<!--STUDENT_COURSE start-->
+     <% if(_.contains(menuArr,'STUDENT_COURSE')){%>
+
+          <div class="menuItem lh19" data-value=<%=Menu.STUDENT_COURSE.url%>>
+             <%=Menu.STUDENT_COURSE.value%>
+          </div>
+
+      <%
+      }
+      %>
+<!--STUDENT_COURSE end-->  
+
+
+<!--OWN_COURSE start-->
+     <% if(_.contains(menuArr,'OWN_COURSE')){%>
+
+          <div class="menuItem lh19" data-value=<%=Menu.OWN_COURSE.url%>>
+             <%=Menu.OWN_COURSE.value%>
+          </div>
+
+      <%
+      }
+      %>
+<!--OWN_COURSE end-->  
+
+
+<!--ANALYSIS start-->
+     <% if(_.contains(menuArr,'ANALYSIS')){%>
+
+          <div class="menuItem lh19" data-value=<%=Menu.ANALYSIS.url%>>
+             <%=Menu.ANALYSIS.value%>
+          </div>
+
+      <%
+      }
+      %>
+<!--ANALYSIS end-->  
+
+<!--APPEAL start-->
+     <% if(_.contains(menuArr,'APPEAL')){%>
+
+          <div class="menuItem lh19" data-value=<%=Menu.APPEAL.url%>>
+             <%=Menu.APPEAL.value%>
+          </div>
+
+      <%
+      }
+      %>
+<!--APPEAL end-->  
+
+
+<%
+}
+%>
+</script>
+  

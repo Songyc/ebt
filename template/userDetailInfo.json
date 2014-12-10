@@ -1,0 +1,24 @@
+{
+    "result": {
+        "actype": "ER190",
+        "companyId": "111",
+        "companyName": "天津航空有限责任公司",
+        "menus": [
+            "STUDENT_COURSE",
+            "UPLOAD",
+            "FINISHED_COURSE",
+            "UNFINISHED",
+            "OWN_COURSE",
+            "ANALYSIS",
+            "APPEAL"
+        ],
+        "name": "刘伟",
+        "orgId": "25109",
+        "orgName": "A320飞行中队",
+        "roles": [
+            "EBT-INSTRUCTOR-APP"
+        ]
+    },
+    "resultCode": 0,
+    "resultMsg": "调用成功"
+}

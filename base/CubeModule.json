@@ -1,0 +1,12 @@
+{
+	"identifier" : "base",
+	"name" : "基础包",
+	"version": "1.0.9",
+	"hidden":true,
+	"build" : 9,
+	"releaseNote": "midea",
+
+	"dependencies" : {
+		
+	}
+}

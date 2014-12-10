@@ -1,0 +1,647 @@
+{
+    "result": {
+        "actype": "A320",
+        "courseHours": 1,
+        "courseId": 1264,
+        "courseName": "course8",
+        "courseType": "复训",
+        "courseYear": "2015",
+        "courseYearperiod": "下半年",
+        "lessons": [{
+            "airlineDistance": "286NM",
+            "airlineHeight": "FL217",
+            "alternateDistance": "317NM",
+            "alternateHeight": "FL264",
+            "alternateWaypoint": "ZBTJ.P298.PAMDA.P07.HCH.P185.P310.ZSQD",
+            "atis": "A",
+            "cbf": "1、AAAAAAA课程第2部分为机动能力训练部分<br>2、第3-5部分为情景能力训练部分。为提高效率<br>3、第2部分教员给学员设置科目后可省略检查单及其它环节<br>4、直接进入动作训练阶段；第3-5部分教员可自行调整科目顺序，模拟相关人员（如ATC/乘务员）<br>5、配合学员，尽量不干预或中断学员，若必须干预或中断<br>6、配合学员，尽量不干预或中断学员，若必须干预或中断，在评分时应综合考虑。",
+            "cruiseWind": "280/40KT",
+            "dewPoint": "06",
+            "flapsAmount": "2",
+            "flightNo": "GS6504",
+            "lessonId": 4,
+            "lessonNo": "1",
+            "lessonType": "训练",
+            "netWeight": "36000KG",
+            "oilWeight": "6000KG",
+            "otherInfo": "无",
+            "qnh": "1011",
+            "segment": "FFFFFFF",
+            "seqs": [{
+                "seq": "1",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "111111RATM树二级子菜单，二号",
+                        "ratmId": 681,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    },{
+                        "name": "1112222RATM树二级子菜单，二号",
+                        "ratmId": 682,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 411,
+                    "subjectName": "eee"
+                }]
+            },{
+                "seq": "2",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "111111RATM树二级子菜单，二号",
+                        "ratmId": 683,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    },{
+                        "name": "1112222RATM树二级子菜单，二号",
+                        "ratmId": 684,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 412,
+                    "subjectName": "eee"
+                }]
+            },{
+                "seq": "3",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "111111RATM树二级子菜单，二号",
+                        "ratmId": 685,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    },{
+                        "name": "1112222RATM树二级子菜单，二号",
+                        "ratmId": 686,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 413,
+                    "subjectName": "eee"
+                }]
+            },{
+                "seq": "4",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "111111RATM树二级子菜单，二号",
+                        "ratmId": 688,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    },{
+                        "name": "1112222RATM树二级子菜单，二号",
+                        "ratmId": 689,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 414,
+                    "subjectName": "eee"
+                }]
+            }],
+            "takeOffCenter": "15%",
+            "takeOffThrust": "TO-2",
+            "temperature": "23",
+            "transponder": "7001",
+            "utc": "20130601-000",
+            "v1": null,
+            "v2": null,
+            "vr": null,
+            "wayPoint": "ZYTL.MAKNO.NOKAK.CG.ZBTJ",
+            "windDirection": "340",
+            "windSpeed": "8MPS"
+        }, {
+             "airlineDistance": "286NM",
+            "airlineHeight": "FL217",
+            "alternateDistance": "317NM",
+            "alternateHeight": "FL264",
+            "alternateWaypoint": "ZBTJ.P298.PAMDA.P07.HCH.P185.P310.ZSQD",
+            "atis": "A",
+            "cbf": "BBBBBBB课程第2部分为机动能力训练部分，第3-5部分为情景能力训练部分。为提高效率，第2部分教员给学员设置科目后可省略检查单及其它环节，直接进入动作训练阶段；第3-5部分教员可自行调整科目顺序，模拟相关人员（如ATC/乘务员）配合学员，尽量不干预或中断学员，若必须干预或中断，在评分时应综合考虑。",
+            "cruiseWind": "280/40KT",
+            "dewPoint": "06",
+            "flapsAmount": "2",
+            "flightNo": "GS6504",
+            "lessonId": 5,
+           "lessonNo": "2",
+            "lessonType": "检查",
+            "netWeight": "36000KG",
+            "oilWeight": "6000KG",
+            "otherInfo": "无",
+            "qnh": "1011",
+            "segment": "FFFFFFF",
+            "seqs": [{
+                "seq": "1",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "111111RATM树二级子菜单，二号",
+                        "ratmId": 681,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    },{
+                        "name": "1112222RATM树二级子菜单，二号",
+                        "ratmId": 683,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 415,
+                    "subjectName": "eee"
+                }]
+            },{
+                "seq": "2",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "111111RATM树二级子菜单，二号",
+                        "ratmId": 681,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 416,
+                    "subjectName": "eee"
+                }]
+            }],
+            "takeOffCenter": "15%",
+            "takeOffThrust": "TO-2",
+            "temperature": "23",
+            "transponder": "7001",
+            "utc": "20130601-000",
+            "v1": null,
+            "v2": null,
+            "vr": null,
+            "wayPoint": "ZYTL.MAKNO.NOKAK.CG.ZBTJ",
+            "windDirection": "340",
+            "windSpeed": "8MPS"
+        }, {
+            "airlineDistance": "286NM",
+            "airlineHeight": "FL217",
+            "alternateDistance": "317NM",
+            "alternateHeight": "FL264",
+            "alternateWaypoint": "ZBTJ.P298.PAMDA.P07.HCH.P185.P310.ZSQD",
+            "atis": "A",
+            "cbf": "CCCCCC课程第2部分为机动能力训练部分，第3-5部分为情景能力训练部分。为提高效率，第2部分教员给学员设置科目后可省略检查单及其它环节，直接进入动作训练阶段；第3-5部分教员可自行调整科目顺序，模拟相关人员（如ATC/乘务员）配合学员，尽量不干预或中断学员，若必须干预或中断，在评分时应综合考虑。",
+            "cruiseWind": "280/40KT",
+            "dewPoint": "06",
+            "flapsAmount": "2",
+            "flightNo": "GS6504",
+            "lessonId": 6,
+            "lessonNo": "3",
+            "lessonType": "训练",
+            "netWeight": "36000KG",
+            "oilWeight": "6000KG",
+            "otherInfo": "无",
+            "qnh": "1011",
+            "segment": "FFFFFFF",
+            "seqs": [{
+                "seq": "1",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "111111RATM树二级子菜单，二号",
+                        "ratmId": 681,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    },{
+                        "name": "1112222RATM树二级子菜单，二号",
+                        "ratmId": 683,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 417,
+                    "subjectName": "eee"
+                }]
+            },{
+                "seq": "2",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "222222RATM树二级子菜单，二号",
+                        "ratmId": 681,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 418,
+                    "subjectName": "eee"
+                }]
+            },{
+                "seq": "3",
+                "subjects": [{
+                    "ratms": [{
+                        "name": "33333RATM树二级子菜单，二号",
+                        "ratmId": 681,
+                        "scoreranges": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "scores": [{
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 1,
+                            "scoreId": 580
+                        }, {
+                            "color": null,
+                            "remark": "没有颜色",
+                            "score": 2,
+                            "scoreId": 581
+                        }, {
+                            "color": 27,
+                            "remark": "黄色",
+                            "score": 3,
+                            "scoreId": 582
+                        }, {
+                            "color": 28,
+                            "remark": "红色",
+                            "score": 4,
+                            "scoreId": 583
+                        }]
+                    }],
+                    "subjectId": 419,
+                    "subjectName": "eee"
+                }]
+            }],
+             "takeOffCenter": "15%",
+            "takeOffThrust": "TO-2",
+            "temperature": "23",
+            "transponder": "7001",
+            "utc": "20130601-000",
+            "v1": null,
+            "v2": null,
+            "vr": null,
+            "wayPoint": "ZYTL.MAKNO.NOKAK.CG.ZBTJ",
+            "windDirection": "340",
+            "windSpeed": "8MPS"
+        }],
+        "referMaterial": null,
+        "skilledExamRef": "近期经历",
+        "skilledLevel": "机长",
+        "stationCodes": [{
+            "code": 66,
+            "name": "三亚",
+            "value": null
+        }, {
+            "code": 67,
+            "name": "广汉",
+            "value": null
+        }, {
+            "code": 68,
+            "name": "昆明",
+            "value": null
+        }, {
+            "code": 69,
+            "name": "东方飞培",
+            "value": null
+        }, {
+            "code": 70,
+            "name": "上海东方飞培",
+            "value": null
+        }]
+    },
+    "resultCode": 0,
+    "resultMsg": "调用成功"
+}

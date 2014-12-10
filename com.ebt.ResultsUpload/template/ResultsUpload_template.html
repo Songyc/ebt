@@ -1,0 +1,97 @@
+<script id="ResultsUpload_template" type="text/x-underscore-template">
+<%
+    if(typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+    function formate(date) {
+      try {
+            var newtime;
+            newtime = date.replace(/-/g, "/");
+            forDate = new Date(newtime);
+            return forDate;
+         }catch (e){
+        return false;
+             }
+        }
+  %>
+<div class="courseList">
+<!--每一年start-->
+<%_.each(result,function(everyYearItem,index){
+  %>
+  <div class="course_year">
+    <!--一年里的所有月份课程start-->
+    <%_.each(everyYearItem.months,function(monthItem,index){
+      %>
+        <div class="course_month">
+       <p class="timeline bgone"><%=monthItem.month%><%=Locale.month%></p>
+        <!--一年里的所有課時start-->
+     <%_.each(monthItem.lessons,function(lessonItem,index){
+     // beginTime and endTime transform
+
+      %>
+    <div class='bgone course_item fs24' data-lessonId=<%=lessonItem.lessonId%> data-lessonNo=<%=lessonItem.lessonInfo.lessonNo%> data-courseId=<%=lessonItem.lessonInfo.courseId%> data-instructorId=<%=lessonItem.lessonInfo.instructorId%> data-studentId=<%=lessonItem.lessonInfo.studentId%> data-studentSeat=<%=lessonItem.lessonInfo.studentSeat%> data-pnf=<%=lessonItem.lessonInfo.pnf%>>
+          <!--遮罩层-->
+        <div class="course_item_masker"><img src="../base/img/del.ing" alt="" class="del_item"></div>
+        <div class="courseYear textC">
+        <%=lessonItem.lessonInfo.courseYear%><%=lessonItem.lessonInfo.courseYearperiod%> 
+        </div>
+
+        <div class="courseTitle textC">
+        <span class="actype_input">
+        <span class="actype_item">
+        <%=lessonItem.lessonInfo.actype%>
+        </span>
+        <%=Locale.acType%>
+        </span>
+        <%=lessonItem.lessonInfo.courseName%>
+        </div>
+
+          <div class="course_item_bottom">
+              <div class="courseBeginTime c1">
+                  <%=lessonItem.lessonInfo.lessonDate%> 
+                  <!--时间现实逻辑-->
+                  <%
+                  var date1=lessonItem.lessonInfo.startTime;
+                  var date2=lessonItem.lessonInfo.endTime;
+                  var time1=formate(date1).formatDate("hh:mm");
+                  var time2=formate(date2).formatDate("hh:mm");
+                  var day1=formate(date1).formatDate("d");
+                  var day2=formate(date2).formatDate("d");
+                  %>
+                  <%if(day1!==day2){%>
+                      <%=time1%>-<%="+"+time2%>
+                    <%}else{%>
+                          <%=time1%>-<%=time2%>
+                      <%}%>
+                    
+              </div>   
+              <div class="flex c1 pfAndPnf">
+              <!--座位顺序判断-->
+              <%if(lessonItem.lessonInfo.studentSeat=="L"){%>
+                <p class="pf">PF:<%=lessonItem.lessonInfo.studentId%></p>
+                <p class="pnf">PNF:<%=lessonItem.lessonInfo.pnf%></p>
+                <%}else{%>                
+                <p class="pnf">PNF:<%=lessonItem.lessonInfo.pnf%></p>
+                <p class="pf">PF:<%=lessonItem.lessonInfo.studentId%></p>
+                  <%}%>
+              </div> 
+              <div class="station c1">
+                  <%=Locale.place%>:<%=lessonItem.lessonInfo.stationCodeValue%>
+              </div> 
+              <div class="lessonNo c1">
+                 <%=Locale.the%><%=lessonItem.lessonInfo.lessonNo%><%=Locale.lesson%>（<%=lessonItem.lessonInfo.lessonType%>）</div> 
+             <img src="../base/img/choose.ing" alt="" data-dagou="dagou">
+             <img src="../base/img/dagou_grey.ing" alt=""  data-dagou="dagou">
+             <img src="../base/img/dagou.ing" alt="" class="dagou" data-dagou="dagou">
+
+          </div>
+
+    </div>
+    <%})%>
+    </div>
+    <!--一年里的所有课程end-->
+    <%})%>
+  </div>
+<%})%>
+<!--每一年end-->
+</div>
+<%}%>
+     </script>

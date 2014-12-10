@@ -1,0 +1,73 @@
+<script type = 'text/x-underscore-template' id = 'completeResultPage_template'>
+<% 
+	if(resultCode === 0 && typeof result !== 'undefined' && result !== '' && result !== null && result.length !== 0){ 
+%>
+<div class = 'bg' id = 'wrapper'>
+		<div class = 'courseList fs20'>
+		<div class = 'sub_title'>
+					<%= lang.courseList%>
+				</div>
+			<div class = 'title  c1'>
+
+				<div class = 'sup_title'>
+					<div class = 'leLeft' style = 'height:inherit;'></div>
+					<div class = 'sup_list fwn'>
+						<b class = 'estimate'><%= lang.estimate%></b>
+						<b class = 'score2'><%= lang.score%></b>
+						<b class = 'repeat'><%= lang.repeat%></b>
+					</div>
+				</div>
+			</div>
+			<div class = 'course'>
+
+	<% _.each(result.subjects,function(subjects_item,index){
+		console.log(subjects_item)%>		
+<div class = 'template' style = 'position:relative;' data-subjectId = <%= subjects_item.subjectId%> data-courseId = <%= subjects_item.courseId%>>
+
+	<div class = 'lesson'>
+		<div class = 'leLeft'>
+			<b><%= subjects_item.subjectName%></b>
+		</div>
+		<div class = 'leRight'>
+			<div class = 'score'>
+				<div class = 'estimate textC'>
+					
+				</div>
+				<div class = 'score2 textC'>
+					
+				</div>
+				<div class = 'repeat textC'>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<% _.each(subjects_item.ratms ,function(ratms_subjects_item,index){%>
+	<div class = 'checkElement' data-ratmId = <%= ratms_subjects_item.ratmId%>  data-color = <%= ratms_subjects_item.color%>  data-remark = <%= ratms_subjects_item.remark%> >
+		<div class = 'leLeft c6'><b><%= ratms_subjects_item.name%></b></div>
+		<div class = 'leRight'>
+			<div class = 'score'>
+				<div class = 'estimate'>
+					<span><%= ratms_subjects_item.estimate%></span>
+				</div>
+				<div class = 'score2 redCount'>
+					<div></div>
+					<span><%=ratms_subjects_item.score%></span>
+				</div>
+				<div class = 'repeat' style="visibility:hidden">
+					<span><%=ratms_subjects_item.repeat%></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<%})%>
+	<img src = '../base/img/u05_normal.ing' width = '30' height = '30' alt = '' class ='imgUl' >
+</div>
+<%})%>
+<%}%>
+	</div>
+	</div>
+	
+</div>
+</script>

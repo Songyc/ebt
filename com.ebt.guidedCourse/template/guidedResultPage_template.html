@@ -1,0 +1,86 @@
+<script type = 'text/x-underscore-template' id = 'guidedResultPage_template'>
+<%
+	if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+%>
+<div id = 'wrapper'>
+	<div id = 'scroller'>
+		<div  class = 'courseList  fs20'>
+		<div class = 'sub_title'>
+					<p><%= lang.courseList%></p>
+				</div>
+			<div class = 'title  c1 '>
+				<div class = 'sup_title '>
+					<div class = 'leLeft' style = 'height:inherit;'></div>
+					<div class = 'sup_list fwn'>
+						<b class = 'estimate'><%= lang.estimate%></b>
+						<b class = 'score2'><%= lang.score%></b>
+						<b class = 'repeat'><%= lang.repeat%></b>
+					</div>
+				</div>
+			</div>
+		
+			<div class = 'course'>
+<%_.each(result.subjects,function(item,index){
+	//console.log(item);
+	%>
+
+<div class = 'template'>
+	<div class = 'lesson'>
+		<div class = 'leLeft'><b> <%=item.subjectName%></b></div>
+		
+		<div class = 'leRight'>
+			<div class = 'score'>
+				<div class = 'estimate textC'>
+					
+				</div>
+				<div class = 'score2 textC'>
+					
+				</div>
+				<div class = 'repeat textC'>
+					
+				</div>
+			</div>
+		</div>
+		<div class = 'leConter'>
+			<img class = 'img' src = '../base/img/u02_normal.ing' alt = '' width ='25'>	 
+		</div>
+	</div>
+
+	<%_.each(item.ratms,function(ratm_items,index){
+		//console.log(ratm_items);
+		%>
+	<div class = 'checkElement' data-ratmId = <%= ratm_items.ratmId%>  data-color = 
+		<%= ratm_items.color%> >
+		<div class = 'leLeft c6'><b> <%=ratm_items.name%></b></div>
+		
+		<div class = 'leRight'>
+			<div class = 'score'>
+				<div class = 'estimate'>
+					<span><%=ratm_items.estimate%></span>
+				</div>
+				<div class = 'score2 redCount'>
+					<div></div>
+					<span><%=ratm_items.score%></span>
+				</div>
+				<div class = 'repeat' style="visibility:hidden">
+					<span><%=ratm_items.repeat%></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%})%>
+</div>
+
+	<%})%>
+		
+<%
+	}
+%>
+</div>
+	
+</div>
+
+</div>
+</div>
+</div>
+</script>

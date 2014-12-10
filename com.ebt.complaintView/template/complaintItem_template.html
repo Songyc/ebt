@@ -1,0 +1,45 @@
+<script id="complaintItem_template" type="text/x-underscore-template">
+<%
+    if(typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+  %> 
+<div class="complaintList swiper-container">
+<div class='swiper-wrapper'>
+<%_.each(result,function(item,index){%>
+<div class="complaintItem fs22" id=<%=index+1%>>
+   <span> <%=item.year%><%=item.yearperiod%> <%=item.courseName%><%=item.lessonNo%>(<%=item.lessonType%>)</span>
+    <div class="checkForward">
+      <img src = '../base/img/u03_normal.ing'></div>
+
+</div>
+<%})%>
+</div>
+<div class='outerPagi'>
+  <div class="pagination"></div>
+</div>
+</div>
+
+<%}%>
+</script>
+
+<script id="complaintdialog_template" type="text/x-underscore-template">
+<%
+    if(typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+  %> 
+      <%_.each(result,function(item,index){%>
+
+       <div class="dialog" id=dialog<%=index+1%>>
+       <label class="dialogLabel fs20 fwn"><%= lang.complaintViewContent%>
+        <div class="dialogdel "><%= lang.cancel%></div>
+        </label>
+        
+       <div class="dialogDetail fs18">
+       <div><span style = 'color:rgb(40, 135, 218);'><%= lang.complaintViewSubject%>:</span><span><%=item.subjectName%></span></div>
+       <div><span style = 'color:rgb(40, 135, 218);'><%= lang.instructor%>:</span><span><%=item.instrouctor%></span></div>
+       <div><span style = 'color:rgb(40, 135, 218);'><%= lang.complaintViewContent%>:</span></div><p><%=item.content%></p>
+       </div>
+       <div class="dailogFoot textC c1"></div>
+       </div>
+       <%})%>
+<%}%>
+</script>
+

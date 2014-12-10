@@ -1,0 +1,97 @@
+<style type="text/css" media="all">
+body {
+	background: url('../base/img/login_bg.ing') no-repeat 0 0 fixed;
+	height: 748px;
+	width: 100%;
+	background-size: 100% 748px;
+	background-color: #00ff00;
+}
+.middlecont {
+	width: 300px;
+	margin: 100px auto 0;
+	padding: 10px;
+	height: 250px !important;
+}
+.logo {
+	margin: 0 auto;
+	line-height: 30px;
+	letter-spacing: 0.1em;
+}
+.input_item {
+	position: relative;
+	margin-top: 20px;
+}
+.loginbtn {
+	margin-top: 20px;
+	line-height: 40px;
+	background-image: -webkit-linear-gradient(top, #22a7e0, #1279be);
+	letter-spacing: 0.5em;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+.loginItem {
+	margin-top: 10px;
+}
+.input_item input {
+	color: #b1b3b2 !important;
+	font-size: 20px !important;
+	border: none;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+.input_item input::-webkit-input-placeholder {
+	color: #b1b3b2 !important;
+	font-size: 20px !important;
+}
+.dagou {
+	position: absolute;
+	top: -10px;
+	left: 2px;
+	width: 27px;
+	display: none;
+}
+.remPass {
+	position: relative;
+}
+img[src$="unselected.ing"] {
+	width: 23px;
+}
+.remPass span {
+	vertical-align: top;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+
+<div class="content">
+<div class="middlecont">
+	<div class="logo">
+		<p class="c1 fs28 textC fw">
+			<%=lang.logo_name%></p>
+	</div>
+	<div class="login fs20">
+		<div class="input_group">
+			<div class="input_item">
+				<input id="account" type="text" placeholder="<%=lang.account%>" class="identityId"></div>
+			<div class="input_item">
+				<input id="password" type="password" placeholder="<%=lang.password%>" class="password"></div>
+		</div>
+		<div class="textC c1 loginbtn">
+			<%=lang.login%></div>
+		<div class="flex loginItem">
+			<label class="remPass">
+				<input id="rd_val" type="hidden" value="0"/>
+				<img src="../base/img/unselected.ing" class="rd_unselected" id="rememberPassword"/>
+				<img src="../base/realImg/dagou.png" class="dagou" />
+				<span class="c1">
+					<%=lang.remember_password%></span>
+			</label>
+		</div>
+	</div>
+</div>
+</div>

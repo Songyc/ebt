@@ -1,0 +1,288 @@
+<style type="text/css" media="all">
+h1{
+	font-weight: normal;
+}
+.skilledLevel{width:20%;padding:0 5px;}
+.coursebtn {
+	width: 100%;
+	height:40px;
+	line-height: 40px;	
+	border-radius: 10px;
+	margin: 50px auto 0;
+	padding: 7px 0;
+	background-image: -webkit-linear-gradient(top, #00b0eb, #0d94d4 50%, #0d94d4 51%, #0e74bc);
+}
+.particiQuery {
+	width: 400px;
+	margin:80px auto 0;
+	height:auto!important;
+}
+.width25 {
+	line-height: 40px;
+}
+
+/* 搜索框样式 */
+.searchDailog {
+	width: 500px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	z-index: 99;
+	margin-left: -250px;
+	background-image: -webkit-linear-gradient(top,  #ffffff , #ffffff);
+	display:none;
+	border-radius:10px;
+}
+.searchLabel {
+	border-bottom: 2px solid #d0d0d0;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	display: block;
+	height:50px;
+}
+#wrapper{
+	margin: 20px;
+	overflow:hidden;
+}
+.searchbody {
+	background: #fff;
+	border-radius: 10px;
+	height:129px;
+	/* border-radius: 5px; */
+}
+.queryList {
+	height:auto;
+	line-height: 55px;
+	width:460px;
+}
+.queryList li{
+	position: relative;
+	border-bottom:1px solid #ffffff;
+}
+.queryList:first-child>li{
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+.queryList:last-child>li{
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.syc{
+	padding-left:20px;
+	font-weight:normal;
+	background:#29a7e1;
+}
+ .name input[type="text"]::-webkit-input-placeholder{
+	color: #ccc;
+	font-size: 22px;
+	line-height: 22px;
+}
+.queryList li img{
+	  position: absolute;
+		top: 8px;
+		right: -4px;
+		margin-top: -8px;
+		padding: 20px 30px;
+}
+.listItemSide{
+	width:100%;
+	height:auto;
+	display:none;
+}
+.listItem{
+	/*padding:20px 10px 10px;*/
+	border-left:none;
+	border-bottom:none;
+	display:block;
+	border-bottom:1px solid #d0d0d0!important;
+}
+.listItem:first-child{
+	display:block;
+}
+.pad{
+	padding-bottom:20px;
+}
+.flex input,.flex select{
+	/*border:1px solid blue;*/
+	height:38px;
+	color:#000;
+}
+.bg{
+	position: absolute;
+	right: 11px;
+	top: 72px;
+	border-top: 13px solid #000;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent
+}
+.listItem .flex div{
+	height:42px;
+	line-height: 42px;
+}
+.list li {
+	padding: 10px;
+	margin: 0
+}
+.list li {
+	border-bottom: none;
+}
+/*.list li:first-of-type {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.list li:last-of-type {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}*/
+.dialogdel {
+	position: absolute;
+	right: 18px;
+	top: 12px;
+	color: rgb(40, 135, 218);
+}
+.dailogFoot {
+	background: #818181;
+	height: auto;
+	overflow: hidden;
+}
+.showCourse{
+	margin: 12px 30px 50px;
+}
+header img{
+	position:absolute;
+	top: 0;
+	left: 0;
+	padding: 18px 24px 17px 24px;
+}
+.flexs{
+	border:1px solid #349cd0;
+	border-radius: 5px;
+	width:100%;
+	height:auto;
+	background-color: #fff;
+}
+.flexs input[type='text']{
+	width:300px;
+	color:#CCC;
+	font-weight: normal;
+	box-shadow: none;
+	height:30px;
+	color:#339cd3;
+}
+
+.name,.time{
+	height:50px;
+	width:95%;
+	line-height: 50px;
+	border-bottom: 1px solid #d0d0d0;
+	margin-left:20px;
+	position: relative;
+}
+.name+.time{
+	border:none;
+}
+.time .c2{padding-right:40px;}
+.flexs img{
+	position:absolute;
+	top: 14px;
+	right: 10px;
+	width: 14px;
+	height: 24px;
+}
+.outerPagi{
+	position: absolute;
+	z-index: 20;
+	bottom: 6px;
+	width: 100%;
+	height: 30px;
+}
+.pagination {
+  	margin:0 auto;
+	/*top: 92%;*/
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin-right: 15px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #29a7e1;
+}
+/*.swiper-slide,.swiper-wrapper{
+	height:129px!important;
+}*/
+.swiper-slide{
+	height:auto!important;
+	float:left;
+}
+.courseName{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
+	width: 83%;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+<header class="top-title c1">
+	<img src = '../base/img/back.ing'>
+	<h1 class="title fs24 textC"><%= lang.participationQuery%></h1>
+</header>
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+<div class="content">
+<div class="particiQuery">
+	<!-- <div class="flex c1 fs24 pad">
+		<p class="width25">姓名：</p>
+		<p class="width75">
+			<input type="text" placeholder="" class="Name" ></p>
+	</div>
+	<div class="flex c1 fs24 pad">
+		<p class="width25">年度：</p>
+		<p class="width75">
+			<select class = 'fs24 c0'>
+				<option value = '2014' selected>2014</option>
+				<option value = '2013'>2013</option>
+			</select>
+			<div class = 'bg'></div>
+		</p>	
+	</div> -->
+	<div class = 'flexs fs22 c0'>
+		<div class = 'name '>
+			<span class = 'textC names'><%= lang.name%></span>
+			<input type = 'text'  placeholder= <%= lang.write_studentName%> class = 'studentId'>
+		</div>
+		<div class = 'time flex'>
+			<p class = 'width25'><%= lang.time%></p>
+			<p class = 'width60 textR c2 courseYear'></p>
+			<input type = 'text' style = 'display:none;' value = '' class = 'obj'>	
+			<img src = '../base/img/u03_normal.ing' class = 'chooseCourseTimeImg'>
+		</div>
+	</div>
+	<div class="coursebtn textC c1 fs24"><%= lang.search%></div>
+</div>
+
+	
+</div>
+
+<!-- 学员参训情况 -->
+<div class="searchDailog">
+
+</div>
+<!-- 显示课时信息 -->
+
+<!-- 遮罩层 -->
+<div class="masker"></div>
+<footer class="footer-menu"></footer>

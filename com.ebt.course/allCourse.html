@@ -1,0 +1,543 @@
+<style type="text/css" media="all">
+.aside {
+    width: 154px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../base/img/shadow.ing);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.content {
+    position: absolute;
+    top: 60px;
+    bottom: 40px;
+    height: auto !important;
+    width: auto !important;
+    z-index: 0;
+}
+.content:before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    bottom: 0;
+    width: 14px;
+    background: #E89216;
+    left: 64px;
+    margin-left: -3px;
+}
+.courseList {
+    padding: 0 20px 0 172px;
+    margin: 0 auto;
+}
+.course_year {
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    padding-top: 2px;
+    /* padding-bottom: 14px; */
+}
+.course_year:last-child {
+    margin-bottom: 1px;
+}
+.timeline {
+    position: absolute;
+    left: 46px;
+    width: 84px;
+    height: 92px;
+    color: #fff;
+    border-radius: 50px;
+    margin: -6px 0 0 -20px;
+    line-height: 85px;
+    text-align: center;
+}
+.course_year>div {
+    position: relative;
+    width: 46.6%;
+    /* max-width: 280px; */
+    
+    display: inline-block;
+    /* sqhom 20140819bug fix */
+    /* height: 304px; */
+    
+    height: 294px;
+    background: #FFFFFF;
+    float: left;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    margin: 1px 1.2% 20px 1.2%;
+    /* box-shadow: 3px 3px 5px rgba(0,0,0,0.2); */
+    
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+}
+.tipPic {
+    width: 30px;
+    height: 34px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 13px 20px 11px 20px;
+}
+.bgone {
+    background-image: url(../base/img/time_base.ing);
+    background-repeat: no-repeat;
+}
+.bgtwo {
+    background: #000066
+}
+/*详情对话框样式*/
+
+.courseTip {
+    border-radius: 10px;
+    background: #FFFFFF;
+    position: absolute;
+    line-height: 30px;
+    display: none;
+    z-index: 99;
+    color: #3A3635 !important;
+}
+.course_ref {
+    height: auto;
+    overflow: hidden;
+}
+.course_ref_title {
+    float: left;
+}
+.course_ref_title {
+    width: 90px;
+}
+.course_ref_list li {
+    list-style: inside disc;
+    margin-left: 2px;
+}
+/*搜索框样式*/
+
+.searchDailog {
+    width: 500px;
+    height: 206px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    margin-left: -250px;
+    margin-top: -103px;
+    background-color: #FFFFFF;
+    display: none;
+    border-radius: 10px;
+}
+.searchLabel {
+    position: relative;
+    border-bottom: 2px solid #D0D0D0;
+    height: 50px;
+    line-height: 50px;
+    color: #231A15;
+    display: block;
+}
+.cancelBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 18px;
+    color: #319CD0;
+}
+.confirmBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 18px;
+    color: #319CD0;
+}
+.searchItem {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 18px;
+    border-bottom: 2px solid #D0D0D0;
+}
+.searchItemName {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #231A15;
+}
+.chooseCourseTime {
+    width: 160px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #319CD0;
+    padding-right: 64px;
+    background-image: url(../base/img/chooseCourseTime.ing);
+    background-repeat: no-repeat;
+    background-position: 180px 12px;
+}
+#courseYear,
+#courseYearperiod {
+    display: inline-block;
+    color: #319CD0;
+}
+#courseYearperiod {
+    margin-left: 5px;
+}
+#skilledLevel {
+    position: absolute;
+    left: 100px;
+    right: 25px;
+    top: 11px;
+    /* border: #329DD1 1px solid; */
+    
+    border-radius: 7px;
+    height: 26px;
+    line-height: 26px !important;
+    font-size: 0;
+}
+.skilledLevelItem {
+    width: 117px;
+    display: inline-block;
+    color: #329DD1;
+    border-top: 1px #329DD1 solid;
+    border-bottom: 1px #329DD1 solid;
+    ;
+    border-right: 1px #329DD1 solid;
+}
+.skilledLevelItem:first-child {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-left: 1px #329DD1 solid;
+}
+.skilledLevelItem:last-child {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.skilledLevelActive {
+    background-color: #329DD1;
+    color: #FFFFFF;
+}
+#courseName {
+    position: absolute;
+    left: 90px;
+    right: 25px;
+    height: 100%;
+    color: #329DD1;
+    line-height: 26px;
+    width: 357px;
+    box-shadow: none !important;
+}
+input::-webkit-input-placeholder {
+    color: #DCDEDD !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+/*iscroll 强哥*/
+
+.c_d_wrapper {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+.c_d_scroller {
+    width: 100%;
+}
+#wrapper {
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+#scroller {
+    position: absolute;
+    top: 4px;
+    z-index: 1;
+    width: 100%;
+}
+.leftTop {
+    left: 50px !important;
+}
+h1 {
+    font-weight: normal;
+}
+.bookmarks {
+    padding-right: 15px !important;
+    position: relative;
+    margin-right: 5px !important;
+}
+.triangle {
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid #FFFFFF;
+}
+.menu {
+    width: auto;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    display: none;
+    z-index: 9999;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    color: #329DD1 !important;
+}
+.menuItem {
+    border-bottom: #CCCCCC 1px solid;
+    padding: 22px 14px;
+    width: 106px;
+    height: 38px;
+    text-align: center;
+    position: relative;
+    margin: 0 8px;
+}
+.menuItem:last-child {
+    border-bottom: none;
+}
+.lh38 {
+    line-height: 38px;
+}
+.lh19 {
+    line-height: 19px;
+}
+.bookmarksCounter {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    background-color: #D71418;
+    display: none;
+}
+.waitUploadCounter,
+.waitCompletionCounter {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background-color: #D71418;
+    color: #FFFFFF;
+    line-height: 23px;
+    text-align: center;
+    display: none;
+}
+.courseTitle {
+    position: absolute;
+    top: 40px;
+    width: auto;
+    margin: 0 25px;
+    z-index: 2;
+    line-height: 30px;
+    height: 60px;
+}
+.new_bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-top: 80px solid #E89216;
+    border-top-right-radius: 10px;
+    z-index: 1;
+}
+.new_replace {
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 0;
+    height: 0;
+    border-top: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-left: 80px solid #FFFFFF;
+}
+.new {
+    position: absolute;
+    top: 17px;
+    right: 8px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    z-index: 3;
+}
+.downloadTip {
+    position: absolute;
+    top: 132px;
+    width: 100%;
+    height: 60px;
+}
+.download {
+    /* padding: 0 159px; */
+    
+    margin-left: 161px;
+}
+.already {
+    line-height: 60px;
+    color: #7B7B7D;
+}
+.course_item_bottom {
+    width: 100%;
+    height: 58px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36aae0), color-stop(100%, #056592));
+    background: -webkit-linear-gradient(top, #36aae0 0%, #056592 100%);
+    background: linear-gradient(top, #36aae0 0%, #056592 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.course_item_masker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.course_item_masker>img{
+    width:40px;
+    height:40px;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.course_time_role {
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    line-height: 58px;
+    text-indent:25px;
+    padding-right: 70px;
+    -webkit-box-sizing:border-box;
+}
+.arrow_down {
+    position: absolute;
+    right: 22px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 10px solid #FFFFFF;
+}
+.course_detail_info {
+    margin: 20px 20px 78px 20px;
+}
+#menuMasker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+
+<!-- header -->
+<header class="top-title c1 fs24">
+    <div class="time leftTop fs20" id="showTime"></div>
+    <h1 class="title textC">
+        <%=lang.allcourse%>
+    </h1>
+    <div class="rightTop">
+        <div class="edit">
+             <img src=" ../base/img/topdel.ing" alt="" width="28px">
+        </div>
+        <div class="refresh">
+            <img src="../base/img/refresh.ing" alt="">
+        </div>
+        <div class="search">
+            <img src="../base/img/search.ing" alt="">
+        </div>
+        <div class="bookmarks">
+            <div class="bookmarksCounter"></div>
+            <img src="../base/img/bookmarks.ing" alt="">
+        </div>
+    </div>
+</header>
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<div class="content">
+    <div class="aside"></div>
+    <div id="wrapper">
+        <div id="scroller"></div>
+    </div>
+</div>
+<!-- 课程tip列表 -->
+<div class="courseTipList">
+
+</div>
+
+<!-- 搜索框 -->
+<div class="searchDailog fs20">
+    <div class="searchForm">
+        <label class="searchLabel textC">
+            <div class="cancelBtn">
+                <%=lang.cancel%>
+            </div>
+            <%=lang.courseQuery%>
+                <div class="confirmBtn">
+                    <%=lang.confirm%>
+                </div>
+        </label>
+        <div class="searchItem" id="chooseCourseTime">
+            <div class="searchItemName">
+                <%=lang.courseTime%>
+            </div>
+            <div class="chooseCourseTime">
+                <div id="courseYear"></div>
+                <div id="courseYearperiod"></div>
+            </div>
+        </div>
+        <div class="searchItem">
+            <div class="searchItemName">
+                <%=lang.leval%>
+            </div>
+            <div id="skilledLevel">
+                <div class="skilledLevelItem fs20 textC skilledLevelActive">
+                    <%=lang.all%>
+                </div>
+                <div class="skilledLevelItem fs20 textC">
+                    <%=lang.captainter%>
+                </div>
+                <div class="skilledLevelItem fs20 textC">
+                    <%=lang.copilot%>
+                </div>
+            </div>
+        </div>
+        <div class="searchItem" style="border-bottom:none;">
+            <div class="searchItemName">
+                <%=lang.courseName%>:</div>
+            <input type="text" id="courseName" placeholder="<%=lang.keywords%>">
+        </div>
+    </div>
+</div>
+
+<footer class="footer-menu"></footer>
+<!-- 主页菜单 -->
+<div class="menu fs20">
+    <div class="triangle"></div>
+</div>
+<!-- 遮罩层 -->
+<div class="masker"></div>
+<div id="menuMasker"></div>

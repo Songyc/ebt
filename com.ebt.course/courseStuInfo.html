@@ -1,0 +1,207 @@
+<style type="text/css" media="all">
+.content {
+    position: relative !important;
+}
+h1 {
+    font-weight: normal;
+}
+.leftTop {
+    left: 0 !important;
+    padding: 0 24px;
+}
+.leftTop img {
+    margin-top: 18px !important;
+}
+.title{margin-left:60px;}
+.rightTop {
+    right: 24px;
+}
+.inputInfo {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 70%;
+}
+.inputInfoItem {
+    width: 100%;
+    margin-bottom: 22px;
+}
+.userinfo {
+    line-height: 30px;
+    margin-top: 15px;
+    position: relative;
+    height: 120px;
+}
+.LSide,
+.RSide {
+    max-width: 280px;
+    position: absolute;
+    top: 0;
+}
+.RSide {
+    right: 0;
+}
+.LSide {
+    left: 0;
+}
+.splitLine {
+    height: 100%;
+    width: 1px;
+    border: none;
+    border-left: 1px solid #b8b9bd;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+.seattype {
+    max-width: 280px;
+    margin-top: 10px;
+}
+.seattype .seat_item:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.seattype .seat_item:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.seat_item {
+    border: 1px #329DD1 solid;
+    min-width: 140px;
+    -webkit-box-sizing: border-box;
+}
+.seat_item.active {
+    background-color: #329DD1;
+    color: #FFFFFF;
+}
+#stuPF,
+#stuPNF {
+    height: 40px;
+    color: #329DD1;
+    line-height: 30px;
+    width: 280px;
+    box-shadow: none !important;
+    border: 1px solid #29A7E1;
+    border-radius: 5px;
+}
+input::-webkit-input-placeholder {
+    height: 30px;
+    color: #DCDEDD !important;
+    font-size: 16px !important;
+    line-height: 30px !important;
+}
+.selectStation {
+    height: auto;
+    overflow: hidden;
+    padding: 0 1px;
+}
+.trainDate {
+    margin-top: 15px;
+    position: relative;
+}
+.trainDateInput {
+    border: 1px solid #29A7E1;
+    height: 40px;
+    line-height: 38px;
+    text-indent: 0.5em;
+    -webkit-box-sizing: border-box;
+}
+.trainDatePic {
+    position: absolute;
+    right: 10px;
+    top: 33px;
+}
+.trainDateTitle,
+.stationTitle {
+    padding-bottom: 6px;
+    display: block;
+    width: 100%;
+}
+.stationItem {
+    border: 1px #329DD1 solid;
+    min-width: 143px;
+    padding: 4px 5px;
+    float: left;
+    margin-left: -1px;
+    margin-top: 3px;
+    -webkit-box-sizing: border-box;
+}
+.stationItemActive {
+    background-color: #329DD1;
+    color: #FFFFFF;
+}
+.width115 {
+    width: 115px;
+}
+.noStations {
+    color: #7c7477;
+    display: block;
+    width: 100%;
+}
+.beginCourseBtn {
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 5px;
+    padding: 6px 0;
+    background-color: #25aae2;
+    box-shadow: 0px 3px 2px #0f75bd;
+}
+#wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100% !important;
+}
+#scroller {
+    width: 100%;
+    height: auto;
+}
+/*对话框样式*/
+
+.uploadTip {
+    display: none;
+    height: 170px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    margin-top: -85px;
+    left: 50%;
+    margin-left: -200px;
+    background: #fff;
+    z-index: 99;
+    border-radius: 5px;
+}
+.footBtn {
+    border-top: 1px solid #ddd;
+    line-height: 40px;
+    margin-top: 20px
+}
+.upload_cancel {
+    border-right: 1px solid #ddd;
+}
+.tipmsg {
+    padding: 20px 50px 0 50px;
+    height: 80px;
+}
+.ifPass {
+    padding: 20px 10px 0 10px;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+<div id="content">
+</div>
+<!-- 提示对话框 -->
+<div class="uploadTip textC fs20">
+    <div class="tipmsg c0"></div>
+    <div class="footBtn flex c2">
+        <div class="dialog_cancel">
+            <%=lang.cancel%>
+        </div>
+        <div class="dialog_Confirm">
+            <%=lang.confirm%>
+        </div>
+    </div>
+</div>
+<div class="masker"></div>
+<footer class="footer-menu"></footer>

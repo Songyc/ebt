@@ -1,0 +1,54 @@
+<script id="allCoursetip_template" type="text/x-underscore-template">
+<%
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+  %>
+<!--每一年start-->
+     <%_.each(result,function(everyYearItem,index){%>
+         <!--一年里的所有课程各自的详细信息start-->
+         <%_.each(everyYearItem.courses,function(courseItem,index){
+             var courseTime= courseItem.courseHours*2;
+          %>
+                <div class="courseTip c1" id=courseDetail<%=courseItem.courseId%>>
+               
+
+               <div class="course_detail_info fs18">
+                  <div id=wrapper<%=courseItem.courseId%> class="c_d_wrapper">
+                    <div class="c_d_scroller">
+                      <div><%=lang.skilledLevel%>:<%=courseItem.skilledLevel%></div>
+                       <%=lang.coursetype%>：<%=courseItem.courseHours%> ( <%=courseTime%><%=lang.hours%> )
+                       <br>
+                       <%=lang.checkItem%>：<%=courseItem.skilledExamRef%>
+                       <br>
+                       <%=lang.reference%>：
+                       <br>
+                       <ul class="course_ref_list fs18">
+                        <%
+                       var referMaterialArr = courseItem.referMaterial.split("\r\n") ;
+                       for(var i=0;i<referMaterialArr.length;i++){
+                          %>
+                        <li>
+                        <%=referMaterialArr[i]%>
+                        </li>
+                        <%}%>
+                        </ul>
+                    </div>
+                  </div>
+               </div>    
+
+        <div class="course_item_bottom">
+               <div class="course_time_role fs24 c1 textE">
+                 <%=courseItem.courseYear%><%=courseItem.courseYearperiod%> | <%=courseItem.skilledLevel%>
+               </div>   
+
+               <img src="../base/img/courseTip.ing" alt="" class="tipPic course_btn">
+             
+               <div class="arrow_down"></div>
+         </div>
+
+                </div>
+         <%})%>
+         <!--一年里的所有课程各自的详细信息end-->
+     <%})%>
+<!--每一年end-->
+<%}%>
+     </script>

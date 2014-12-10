@@ -1,0 +1,112 @@
+<script id="lessonDetail_template" type="text/x-underscore-template">
+<%
+    if(resultCode === 0 && typeof result !=="undefined" && result !==null && result !=="" && result.length !==0){
+%>
+<%
+  	 _.each(result.lessons,function(lessonItem,index){
+  	 	if(lessonItem.lessonId==request("lessonId")){
+	%>
+   <header class="top-title c1 fs24">
+	<h1 class="title textC">
+	<%=result.courseYear%><%=result.courseYearperiod%>  <%=result.actype%><%=lang.acType%><%=result.courseType%><%=lang.course%><%=lang[lessonItem.lessonNo]%>(<%=lessonItem.lessonType%>)
+	</h1>
+	<div class="time leftTop">
+		<img src="../base/img/back.ing" alt=""></div>
+		<%
+		<!--权限判断-->
+		var roles = Piece.Session.loadObject("roles");
+		if(_.contains(roles,"EBT-INSTRUCTOR-APP")){
+		%>
+	<div class="rightTop fs20 c1">
+		<%=lang.beginCourse%>
+		<div class="triangle-right">
+			<!--<div class="triangle-right-repeat"></div>-->
+		</div>
+	</div>
+	<%}%>
+
+	</header>
+
+
+<div class="content">
+<%
+if(typeof lessonItem.seqs !=="undefined" && lessonItem.seqs !==null && lessonItem.seqs !=="" && lessonItem.seqs.length !==0){
+%>
+  <aside class="course_aside fs20">
+	<div class="aside_title fw textC c2">EBT</div>
+	<div id="subject_wrapper">
+	<div id="subject_scroller">
+		<!-- 菜单序号start -->
+		<!-- 第一个seqs的第一个subject高亮 -->
+	<%
+	_.each(lessonItem.seqs,function(menuItem,index){
+		console.log(menuItem);
+		%>
+		<ul data-value=<%=index+1%> class="ul_subject">
+		<%_.each(menuItem.subjects,function(subitem,sub_index){
+			   if(index==0&&sub_index==0){%>
+				<li class="active" data-value='<%=subitem.subjectId%>'>
+				<%}else{%>
+				<li data-value='<%=subitem.subjectId%>'>
+				<%}%>
+			   <%if(sub_index==0){%>
+			   <div class="sub_num fs42">
+			        <%=menuItem.seq%>
+			     </div>
+				<%}%>
+                   <%=subitem.subjectName%>
+                 </li>
+       <%})%>
+		</ul>
+		<%});
+	%>
+		<!-- 菜单序号end -->
+	</div>
+	</div>
+  </aside>
+
+<%}%>
+
+  <div id="wrapper">
+		<div class="allSubject">
+<!-- 序号start -->
+	 <%if(typeof lessonItem.seqs !=="undefined" && lessonItem.seqs !==null && lessonItem.seqs !=="" && lessonItem.seqs.length !==0){
+
+   _.each(lessonItem.seqs,function(seqItem,index){
+   	%>
+   	     <div class="sequence" id=sequence<%=index+1%>>
+    	
+      <!-- 科目start -->
+        <%_.each(seqItem.subjects,function(subItem,index){%>
+			    <div class="subjectItem fs18" id='wrapper<%=subItem.subjectId%>'>
+			    <div id='scroll<%=subItem.subjectId%>'>
+				    <div class="subjectTitle c0 fw fs20">
+					    <%=subItem.subjectName%>
+				    </div>
+				       <!-- 检查要素start -->
+				       <%_.each(subItem.ratms,function(ratmItem,index){%>
+				       <div class="ratmItem c2">
+					    <%=ratmItem.name%>
+				       </div>
+				       <%})%>
+				       <!-- 检查要素end -->
+			    </div>
+			    </div>
+			    <%})%>
+			     <!-- 科目end -->
+		    </div>
+    <%});}else{
+		$(".noLessonInfoTip").show();
+	}%>
+<!-- 序号end -->
+
+		</div>
+	</div>
+  </div>
+<%
+}})
+%>
+<%
+	}
+%>
+</script>

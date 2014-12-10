@@ -1,0 +1,60 @@
+{
+	"result": {
+		"courseId": "123",
+		"lessonId": "321",
+		"instructorId": "zhang3",
+		"studentId": "lisi",
+		"stationCode": "sanya",
+		"remark": "so bad",
+		"finish": "false",
+		"impMeasure": "more practise",
+		"pnf": "pnf",
+		"common": "improve info",
+		"otherinfo": "otherinfo",
+		"startTime": "yyyy-MM-dd HH:mm:ss",
+		"endTime": "yyyy-MM-dd HH:mm:ss",
+		"socreInfo": [{
+			"subjectId": "1",
+			"ratmId": "2",
+			"scoreId": "1",
+			"repeat": "2",
+			"remark": "no good",
+			"estimate": "1"
+		}, {
+			"subjectId": "1",
+			"ratmId": "2",
+			"scoreId": "2",
+			"repeat": "2",
+			"remark": "bad",
+			"estimate": "2"
+		}, {
+			"subjectId": "2",
+			"ratmId": "1",
+			"scoreId": "5",
+			"repeat": "2",
+			"remark": "",
+			"estimate": "1"
+		},{
+			"subjectId": "2",
+			"ratmId": "2",
+			"scoreId": "1",
+			"repeat": "2",
+			"remark": "no good",
+			"estimate": "1"
+		}, {
+			"subjectId": "3",
+			"ratmId": "2",
+			"scoreId": "2",
+			"repeat": "2",
+			"remark": "bad",
+			"estimate": "2"
+		}, {
+			"subjectId": "3",
+			"ratmId": "1",
+			"scoreId": "5",
+			"repeat": "2",
+			"remark": "",
+			"estimate": "1"
+		}]
+	}
+}

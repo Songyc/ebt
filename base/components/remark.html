@@ -1,0 +1,61 @@
+<style type="text/css" media="all" >
+.remarkTip {
+  z-index: 1000;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -121px;
+  margin-left: -250px;
+  width: 500px;
+  min-height: 206px;
+  background-color:#fff;
+  border-radius: 10px;
+}
+.mainMsg {
+  height:150px;
+  padding: 10px 10px;
+  border: none;
+  box-shadow: none;
+  resize:none;
+}
+.mainMsg::-webkit-input-placeholder{
+    color:#000;
+}
+.mainMsg:focus {
+  color: #000
+}
+.remarklabel{
+  position: relative;
+  line-height:40px;
+  border-bottom:1px solid #ddd;
+  border-bottom: 2px solid #D0D0D0;
+  height: 50px;
+  line-height: 50px;
+}
+.remark_cancel,.remark_confirm{position:absolute;top:0;} 
+.remark_cancel{left:10px;} 
+.remark_confirm{right:10px;}
+.wordsTip{
+  position: relative;
+  bottom: 9px;
+  right: 12px;
+  height: 24px;
+  text-align: right;
+}
+.returnInfoBox{
+  position: relative;
+}
+</style>
+<div class="remarkTip">
+  <div class="remarklabel textC fs20">
+    <span class="tip_title"></span>
+      <div class="remark_cancel c2">取消</div>
+      <div class="remark_confirm c2">确认</div>
+  </div>
+ <!--  <textArea class="mainMsg" placeholder="" maxlength="201"></textArea> -->
+ <div class = 'returnInfoBox'>
+      <textarea class = 'fs20 mainMsg' rows = '7' cols ='20' maxlength = '200'/>
+      <div class = 'wordsTip fs16'></div>
+    </div>
+</div>

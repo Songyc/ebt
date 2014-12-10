@@ -1,0 +1,220 @@
+<script id="flydata_template" type="text/x-underscore-template">
+<%
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+  %>
+  <%
+  	%>
+
+<header class="top-title c1 fs24">
+	<h1 class="title textC">
+	<%=result.courseYear%><%=result.courseYearperiod%>  <%=result.actype%><%=lang.actype%><%=result.courseType%><%=lang.course%>
+	</h1>
+</header>
+
+   <%_.each(result.lessons,function(lessonItem,index){
+      if(lessonItem.lessonId == request("lessonId")){ 
+   	%>
+
+<div class="content">
+   <div id="wrapper">
+     <div id="scroller">
+<div class="flydataImg">
+</div>
+
+<div class="flydataTitle textC fs42">
+<%=lang.flydata_title%>
+</div>
+
+<!--数据容器start-->
+<div class="flydataContent fs18">
+    <div class="slide_left"></div>
+    <div class="slide_right"></div>
+
+    <div class="flydataTop">
+    	<div class="flydataTop_left">
+    		<div class="flydataTop_l_r_top">
+    			<span><%=lang.from_to%></span>
+    			<div class="flydataValue">
+  					<%=lessonItem.segment%>
+  				</div>
+    		</div>
+    		<div class="flydataTop_l_r_bottom">
+    			<span><%=lang.flight%></span>
+  				<div class="flydataValue">
+  					<%=lessonItem.flightNo%>
+  				</div>
+    		</div>
+    	</div>
+    	<div class="flydataTop_right">
+    		<div class="flydataTop_l_r_top">
+    			<span><%=lang.flightRoad%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.wayPoint%>
+  				</div>
+    		</div>
+    		<div class="flydataTop_l_r_bottom">
+    			<span><%=lang.alternate%>/<%=lang.flightRoad%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.alternateWaypoint%>
+  				</div>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="flydataBottom">
+    	<div class="flydataBottom_left">
+    		<div class="flydataBottom_left_item">
+    			<span><%=lang.airlineH%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.airlineHeight%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_left_item">
+    			<span><%=lang.Alternate_distance%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.alternateDistance%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_left_item">
+    			<span><%=lang.airline_distance%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.airlineDistance%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_left_item">
+    			<span><%=lang.dbjjcgd%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.alternateHeight%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_left_item">
+    			<span><%=lang.CRZWIND%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.cruiseWind%>
+  				</div>
+    		</div>
+    	</div>
+
+    	<div class="flydataBottom_middle">
+    		<div class="flydataBottom_middle_item">
+    			<span>ATIS</span>
+				<div class="flydataValue">
+  					<%=lessonItem.atis%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span><%=lang.wind_direction%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.windDirection%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span><%=lang.dew_point%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.dewPoint%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span>UTC</span>
+				<div class="flydataValue">
+  					<%=lessonItem.utc%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span><%=lang.wind_speed%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.windSpeed%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span>QNH</span>
+				<div class="flydataValue">
+  					<%=lessonItem.qnh%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span><%=lang.responder%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.transponder%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span><%=lang.temperature%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.temperature%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_middle_item">
+    			<span><%=lang.otherPro%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.otherInfo%>
+  				</div>
+    		</div>
+    	</div>
+    	<div class="flydataBottom_right">
+    		<div class="flydataBottom_right_item">
+    			<span><%=lang.qfzx%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.takeOffCenter%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_right_item">
+    			<span>V1</span>
+				<div class="flydataValue">
+  					<%=lessonItem.v1%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_right_item">
+    			<span><%=lang.wyzl%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.netWeight%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_right_item">
+    			<span><%=lang.qftl%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.takeOffThrust%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_right_item">
+    			<span>VR</span>
+				<div class="flydataValue">
+  					<%=lessonItem.vr%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_right_item">
+    			<span><%=lang.Load%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.oilWeight%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_right_item">
+    			<span><%=lang.flap%></span>
+				<div class="flydataValue">
+  					<%=lessonItem.flapsAmount%>
+  				</div>
+    		</div>
+    		<div class="flydataBottom_right_item">
+    			<span>V2</span>
+				<div class="flydataValue">
+  					<%=lessonItem.v2%>
+  				</div>
+    		</div>
+    	</div>
+      <div style="clear:both;"></div>
+    </div>
+
+  	
+</div>
+<!--数据容器end-->
+
+
+     </div>
+   </div>
+</div>
+
+<%}})%>
+
+
+<%}%>
+</script>

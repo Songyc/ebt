@@ -1,0 +1,11 @@
+<script id ='resultPage_problem_template' type = 'text/x-underscore-template'>
+	<% if(typeof remarkArr !== "undefined" && remarkArr !== null && remarkArr !== "" && remarkArr.length !== 0) {%>
+	<p class="c2 item_title"><%=exsitProblem%></p>
+	<div class="problem_list">
+
+<%_.each(remarkArr,function(item,index){%>
+      <p><%=item.name%></p>
+	<%})%>
+</div>
+<%}%>
+</script>

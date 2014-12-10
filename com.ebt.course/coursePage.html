@@ -1,0 +1,286 @@
+<style type="text/css" media="all">
+/* put your style here */
+
+.content {
+    background: #fff;
+    position: relative;
+    height: 678px;
+    -webkit-user-select: none;
+}
+.sequence {
+    height: 100%;
+    position: relative;
+}
+.back {
+    float: left;
+    height: 50px;
+    padding: 5px 15px 10px 0;
+}
+.leftinfo {
+    height: auto;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.studenttype {
+    color: #949599;
+    font-weight: normal;
+}
+.course_aside {
+    top: 0;
+    bottom: 0;
+}
+.aside_title {
+    position: relative;
+    font-size: 2rem;
+    line-height: 30px;
+    padding: 10px 0 10px 20px;
+}
+.ul_subject li[data-checked="true"] {
+    color: #d1d2d4
+}
+.main {
+    position: relative;
+    width: 66%;
+    margin-left: 34%;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+}
+.sub {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.sub div[id^=scroll] {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.sub div[id^=wrapper] {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 621px;
+}
+.sub_label {
+    padding: 10px 0;
+    line-height: 40px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.label_title {
+    text-indent: 1rem;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.repTime {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.sub_item {
+    padding: 10px 0 10px;
+    margin: 0 10px;
+    background: #fff;
+    border-bottom: 1px solid #24a9e1;
+    line-height: 26px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.sub_item_title{padding-right:30px}
+.sub_item_scoreStandard{
+    position: absolute;
+    top:10px;
+    right:0px;
+    width:27px;
+    height:27px;
+    background-image: url("../base/img/standIcon.ing");
+    background-size: 100% 100%;
+}
+.sub_item:last-child {
+    border-bottom: none;
+}
+.repeat_item,
+.grade_item,
+.score_item {
+    -webkit-box-sizing: border-box;
+    position: relative;
+    line-height: 26px;
+}
+.grade_item {
+    width: 48%;
+}
+.score_item {
+    width: 52%;
+}
+.remark {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+.remark>img {
+    width: 27px;
+    height: 27px;
+}
+.disNone {
+    display: none;
+}
+.grade_item >div:first-child,
+.score_item>div:first-child {
+    width: 16%;
+    margin-top: 16px;
+}
+.grade_item .chooseScore {
+    width: 84%;
+}
+.score_item .chooseScore {
+    width: 80%;
+    margin-right: 8%;
+}
+.sub_item_detail {
+    height: auto;
+    overflow: hidden;
+}
+.sub_item_detail_score {
+    font-size: 0;
+    padding: 15px 6px 15px 6px;
+}
+.repeat_item .sub_item_detail_score {
+    padding: 0;
+}
+.sub_item_detail_score>span {
+    display: inline-block;
+    width: 50px;
+    border: 1px solid #329dd1;
+    border-left: none;
+    text-align: center;
+    font-size: 2rem;
+}
+.sub_item_detail_score>span:first-child {
+    border-left: 1px solid #329dd1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.sub_item_detail_score>span:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.sub_item_detail_score>span.active {
+    background: #329dd1;
+    color: #fff;
+}
+.repeat_pre,
+.repeat_next {
+    width: 25px !important;
+    background: #329dd1;
+    color: #fff;
+}
+.repeat_pre:active,
+.repeat_next:active {
+    background: #dddddd;
+}
+#subject_wrapper {
+    position: relative;
+    height: 543px;
+}
+#subject_scroller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+}
+/* 底部提交按钮 */
+
+.BtnLabel {
+    height: 70px !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 9;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    /* letter-spacing: 3em;
+	*/
+}
+.zcun {
+    background: url("../base/img/zanc.ing") no-repeat center 0;
+}
+.submit {
+    background: url("../base/img/over.ing") no-repeat center 0;
+}
+.zcun,
+.submit {
+    height: 70px;
+    width: 180px;
+    display: inline-block;
+    line-height: 110px;
+    color: #309ecf;
+    background-size: 40px 40px;
+}
+.zcun:active {
+    background: url("../base/img/zancA.ing") no-repeat center 0;
+}
+.submit:active {
+    background: url("../base/img/overA.ing") no-repeat center 0;
+}
+.zcun:active,
+.submit:active {
+    background-size: 40px 40px;
+    background-color: #309ecf;
+    color: #fff;
+}
+.rightTop {
+    right: 24px !important;
+}
+.leftTop span {
+    margin-left: 62px;
+}
+.leftTop img {
+    position: absolute;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+}
+</style>
+<script type="text/x-underscore-template">
+//put your template here
+</script>
+<!-- header -->
+<!-- <header class="top-title c1 fs24">
+<div class="leftTop">
+<img src="../base/img/back.ing" alt="" class="back">
+<span class="courseInfo"></span></div>
+<div class="rightTop fs18"></div>
+</header> -->
+
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+
+<div class="content"></div>
+<div class="BtnLabel textC c1">
+    <div class="zcun">
+        <%=lang.save%>
+    </div>
+    <div class="submit">
+        <%=lang.courseEnd%>
+    </div>
+</div>
+<div class="masker"></div>

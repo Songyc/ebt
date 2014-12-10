@@ -1,0 +1,264 @@
+<style type="text/css" media="all">
+h1{
+	font-weight: normal;
+}
+.content>div{
+	height: auto;
+}
+.flydataImg{
+	margin-top: 15px;
+	background-image: url(../base/img/flydataImg.ing);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 59px !important;
+	width: 100%;
+}
+.flydataTitle{
+	height: 92px !important;
+	width: auto;
+	line-height: 92px;
+	border-bottom:1px solid #646464;
+	margin: 0 115px;
+}
+.flydataContent{
+	position: relative;
+	height:auto;
+	width: auto;
+	margin: 0 115px;
+	border:1px solid #29A7E1;
+	border-radius: 10px;
+	margin-top: 25px;
+	background-color: #FFFFFF;
+}
+.slide_left{
+	width:60px;
+	height:90px;
+	position: absolute;
+	top:50px;
+	left:-90px;
+	background-image: url(../base/img/slide_l.ing);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.slide_right{
+	width:60px;
+	height:90px;
+	position: absolute;
+	top:50px;
+	right:-90px;
+	background-image: url(../base/img/slide_r.ing);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.flydataTop{
+	margin-left: 18px;
+	padding:15px 0;
+	height:auto;
+	width:auto;
+	line-height: 30px;
+	border-bottom:1px solid #646464;
+}
+.flydataTop_left{
+	display: inline-block;
+	margin-right: 20px;
+	height:61px;
+}
+.flydataTop_left span{
+	display: inline-block;
+	width:108px;
+}
+.flydataTop_right{
+	display: inline-block;
+	height:61px;
+}
+.flydataTop_right span{
+	display: inline-block;
+	width:126px;
+}
+.flydataTop_l_r_top{
+	border-bottom:1px solid #646464;
+	display: block;
+	height: 30px;
+}
+.flydataTop_l_r_bottom{
+	display: block;
+	height: 30px;
+}
+.flydataBottom{
+	margin-left: 18px;
+	padding:15px 0;
+	height:auto;
+	width:auto;
+	line-height: 30px;
+}
+.flydataBottom_left{
+	float: left;
+	margin-right: 40px;
+}
+.flydataBottom_middle{
+	float: left;
+	margin-right: 40px;
+}
+.flydataBottom_right{
+	float: left;
+}
+.flydataBottom_left_item{
+	border-bottom:1px solid #646464;
+	display: block;
+	height: 30px;
+}
+.flydataBottom_left_item:last-child{
+	border-bottom: none;
+}
+.flydataBottom_left_item span{
+	display: inline-block;
+	width:136px;
+}
+.flydataBottom_middle_item{
+	border-bottom:1px solid #646464;
+	display: block;
+	height: 30px;
+}
+.flydataBottom_middle_item:last-child{
+	border-bottom: none;
+}
+.flydataBottom_middle_item span{
+	display: inline-block;
+	width:82px;
+}
+.flydataBottom_right_item{
+	border-bottom:1px solid #646464;
+	display: block;
+	height: 30px;
+}
+.flydataBottom_right_item:last-child{
+	border-bottom: none;
+}
+.flydataBottom_right_item span{
+	display: inline-block;
+	width:82px;
+}
+
+.flydataValue{
+	display: inline-block;
+	color: #29A7E2;
+}
+.addBorderBottom{
+	border-bottom: 1px solid #646464;
+}
+#wrapper{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width:100%;
+}
+#scroller{
+	position: absolute;
+	top: 0;
+	height: auto;
+	width:100%;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+
+<div id="content">
+<!-- header -->
+<!-- <header class="top-title c1 fs24">
+	<h1 class="title textC">2014年上半年   ERJ190机型复训课程</h1>
+</header>
+
+uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+content
+<div class="content">
+<div class="main">
+	<div class="datacontent">
+		<div class="data_item fs16">
+			<div class="flex">
+				<div class="width15 textR">始发/目的地</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">航路点</div>
+				<div class="width50"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+			<div class="flex">
+				<div class="width15 textR">航班号</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">备降场/航路点</div>
+				<div class="width50"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+		</div>
+		<div class="data_item fs16">
+			<div class="flex">
+				<div class="width15 textR">航线高度</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">航线距离</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width10 textR">巡航风</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+			<div class="flex">
+				<div class="width15 textR">航班号</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">备降场/航路点</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+				<div class="width30"></div>
+			</div>
+		</div>
+		<div class="data_item fs16">
+			<div class="flex">
+				<div class="width15 textR">ATIS</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">UTC</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width10 textR">应答机</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+			<div class="flex">
+				<div class="width15 textR">风向</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">风速</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width10 textR">温度</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+			<div class="flex">
+				<div class="width15 textR">露点</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">QNH</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width10 textR">其他情况</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+		</div>
+		<div class="data_item fs16">
+			<div class="flex">
+				<div class="width15 textR">起飞重心</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">起飞推力</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width10 textR">襟翼</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+			<div class="flex">
+				<div class="width15 textR">V1</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">VR</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width10 textR">V2</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+			</div>
+			<div class="flex">
+				<div class="width15 textR">无油重量</div>
+				<div class="width20"><input type="text" value="ZYTA-ZBLF"></div>
+				<div class="width15 textR">油重</div>
+				<div class="width20"><input type="text" value="ZYTA.ZYTA.ZYTA.ZYTA.ZYTA.ZYTA"></div>
+				<div class="width30"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<img src="../base/realImg/arrow.png" alt="" class="nextPic"></div> -->
+</div>
+<footer class="footer-menu"></footer>

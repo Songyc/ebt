@@ -1,0 +1,397 @@
+<style type="text/css" media="all">
+/*put your style here*/
+h1{
+	font-weight: normal;
+}
+.time{
+	margin-left: 62px !important;
+}
+/* #content{
+	position:relative;
+	height:708px;
+} */
+.iconBar{
+	position: absolute;
+	top: 24px;
+	bottom: 0;
+	width: 14px;
+	background: #E89216;
+	left: 66px;
+	margin-left: -3px;
+	height:auto!important;
+}
+.iconCircle{
+	background-image: url(../base/img/time_base.ing);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 48px;
+	width: 84px;
+	height: 92px;
+	color: #fff;
+	border-radius: 50px;
+	margin: -13px 0 0 -20px;
+	line-height: 85px;
+	text-align: center;
+	top:14px;
+}
+.course{
+/* 	position:absolute;
+top:0; */
+	padding: 0 20px 0 172px;
+	margin: 0 auto;
+	height:auto;
+	overflow: hidden;
+	position: relative;
+}
+.refresher{
+	height:auto;
+	float:left;
+	width:100%;
+}
+.course_item{
+	background: #FFFFFF;
+	width: 46%;
+	height: 304px;
+	float: left;
+	margin: 1px 1.5% 25px 1.5%;	
+	-webkit-box-sizing: border-box;
+	position: relative;
+	border-radius: 10px;
+	-webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2);
+	border-top: 2px solid rgba(0,0,0,0.2);
+	border-left: 2px solid rgba(0,0,0,0.2);
+}
+
+header>img{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	padding: 18px 24px;
+}
+.aside{
+	width: 154px;
+	position: absolute;
+	top: 0px;
+	bottom: 0;
+	left: 0;
+	background-image: url(../base/img/shadow.ing);
+	background-repeat: no-repeat;
+	background-position: right center;
+	height:;
+}
+#wrapper {
+	position: absolute;
+	top:10px;
+	z-index: 1;
+	width: 100%;
+	height: 632px;
+	overflow: hidden;
+}
+#scroller{
+	position: absolute;
+	top: 10px;
+	z-index: 1;
+	width: 100%;
+	/*height:1000px;*/
+}
+.link{
+	width:100%;
+	height:33%;
+	margin-top:10px;
+} 
+.link p{
+	height:50px;
+	line-height:60px;
+}
+.p{
+	margin:0 40px;
+}
+.courseInfo{
+	width:100%;
+	height:64%;
+	background: -webkit-linear-gradient(top, #36aae0 0%,#056592 100%);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding-top:15px;
+	position: relative;
+	padding: 0 20px;
+	-webkit-box-sizing:border-box;
+}
+.courseInfo p{
+	height: 24%;
+	line-height: 43px;
+}
+.pfAndPnf p {
+	width: 170px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.pfAndPnf p:first-child {
+}
+.pfAndPnf p:last-child {
+	text-align: right;
+}
+.new_bg{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-bottom: 80px solid transparent;
+	border-top: 80px solid #19D337;
+	border-top-right-radius: 10px;
+	z-index: 1;
+}
+.new_replace {
+	position: absolute;
+	right: -80px;
+	top: -80px;
+	width: 0;
+	height: 0;
+	border-top: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-left: 80px solid #FFFFFF;
+}
+.passed{
+	position: absolute;
+	top: 15px;
+	right: 3px;
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	z-index: 3;
+}
+.content{
+	position:relative;
+	top:0px;
+	bottom:0;
+}
+/*搜索框*/
+.searchDailog {
+	width: 500px;
+	height:206px;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	z-index: 99;
+	margin-left:-250px;
+	margin-top:-103px;
+	/* background-image: -webkit-linear-gradient(top, #818181, #323332 50%, #212121 51%, #202020); */
+	background-color: #FFFFFF;
+	display: none;
+	border-radius: 10px;
+}
+.searchLabel {
+	position: relative;
+	border-bottom: 2px solid #D0D0D0;
+	height: 50px;
+	line-height: 50px;
+	color: #231A15;
+	display: block;
+}
+.cancelBtn{
+	position: absolute;
+	left:0;
+	top: 0;
+	padding: 0 18px;
+	color:#319CD0;
+}
+.confirmBtn{
+	position: absolute;
+	right:0;
+	top:0;
+	padding: 0 18px;
+	color:#319CD0;
+}
+.searchItem {
+	/* display: -webkit-box; Safari and Chrome
+	display: -ms-flexbox; Internet Explorer 10
+	display: box;
+	-webkit-box-orient: horizontal;
+	height:25px;
+	margin-top:10px; */
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 18px;
+	border-bottom: 2px solid #D0D0D0;
+}
+.searchItemName{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #231A15;
+}
+.chooseCourseTime{
+	width:139px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color:#319CD0;
+    padding-right:64px;
+    background-image: url(../base/img/chooseCourseTime.ing);
+    background-repeat: no-repeat;
+    background-position: 160px 12px;
+}
+#courseYear,#courseYearperiod{
+	display: inline-block;
+	color:#319CD0;
+}
+#courseYearperiod{
+	margin-left: 5px;
+}
+#skilledLevel{
+	position: absolute;
+	left: 100px;
+	right: 25px;
+	top:11px;
+	/* border: #329DD1 1px solid; */
+	border-radius: 7px;
+	height: 26px;
+	line-height: 26px !important;
+}
+.skilledLevelItem{
+	width: 117px;
+	display: inline-block;
+	color:#329DD1;
+	border-top:  1px #329DD1 solid;
+	border-bottom: 1px #329DD1 solid;;
+	border-right: 1px #329DD1 solid;
+}
+.skilledLevelItem:first-child{
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	border-left: 1px #329DD1 solid;
+}
+.skilledLevelItem:last-child{
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.skilledLevelActive{
+	background-color: #329DD1;
+	color:#FFFFFF;
+}
+#courseName{
+	position: absolute;
+	left: 90px;
+	right: 25px;
+	top:11px;
+	height: 26px;
+	color:#329DD1;
+	line-height: 26px;
+	width:357px;
+	box-shadow: none !important;
+}
+.courseName{
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+	display: block;
+}
+input::-webkit-input-placeholder{
+    color: #DCDEDD !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+.courseYear,.courseName{
+	position:relative;z-index:4;
+}
+</style>
+
+<script type="text/x-underscore-template">//put your template here</script>
+
+<!-- header -->
+
+<!-- <header class="top-title c1 fs24">
+	<div class="time leftTop ">Wed 11 June  10:00</div>
+	<h1 class="title textC">已指导的课程</h1>
+	<div class="rightTop">
+		<div class="refresh">
+			<img src="../base/realImg/refresh.png" alt=""></div>
+		<div class="search">
+			<img src="../base/realImg/search.png" alt=""></div>
+	</div>
+</header> -->
+
+
+<header class="top-title c1 fs24">
+	
+	<img src = '../base/img/back.ing'>
+	
+	<div class="time leftTop fs20" id = "showTime"></div>
+	<h1 class="title textC"></h1>
+	<div class="rightTop">
+		<div class="search">
+			<img src="../base/img/search.ing" alt="" class = 'show'></div>
+		<div class="bookmarks">
+			<div class="bookmarksCounter"></div>
+			<img src="../base/img/u04_normal.ing" width = '27' height = '28' alt=""></div>
+		</div>
+</header>
+<!-- uncomment this if you want a sencondary-bars
+
+<nav class="bar-standard bar-header-secondary"></nav>
+-->
+<!-- content -->
+
+<!-- <div id = 'body'> -->
+
+
+<!-- <div id = 'content'> -->
+<div class="content">
+	<div class = 'aside'></div>
+	<div class ="iconBar"></div>
+	<div id="wrapper">
+		<div id="scroller">
+		
+	</div>
+	</div>
+</div>
+<!-- </div> -->
+
+<!-- 搜索框 -->
+<div class="searchDailog fs20">
+<label class="searchLabel textC">
+    <div class="cancelBtn"><%= lang.cancel%></div>
+	<%= lang.courseQuery%>
+	<div class="confirmBtn"><%= lang.confirm%></div>
+</label>
+	<div class="searchItem courseTime">
+		<div class="searchItemName"><%= lang.courseTime%></div>
+        <div class="chooseCourseTime">
+        	<div id="courseYear"></div>
+        	<div id="courseYearperiod"></div>
+        </div>
+	</div>
+	<div class="searchItem">
+		<div class="searchItemName"><%= lang.Applevel%></div>
+		<div id="skilledLevel">
+			<div class="skilledLevelItem textC skilledLevelActive"><%= lang.all%></div><div class="skilledLevelItem textC"><%= lang.captainter%></div><div class="skilledLevelItem textC"><%= lang.copilot%></div>
+		</div>
+	</div> 
+	<div class="searchItem" style="border-bottom:none;">
+		<div class="searchItemName"><%= lang.guidedCourse%>:</div>
+  		<input type="text" id="courseName" placeholder="<%= lang.keywords%>">
+	</div>
+</div>
+<!-- 单元测试 -->
+
+<!-- <div class="qunitTest">
+	<h1 id="qunit-header">Qunit Test Suite</h1>
+	 <h2 id="qunit-banner"></h2>
+	 <div id="qunit-testrunner-toolbar"></div>
+	 <h2 id="qunit-userAgent"></h2>
+	 <p id="qunit-testresult" class="result"></p>
+	 <ol id="qunit-tests"></ol>
+	 <div id="qunit-fixture"></div>
+</div> -->
+<!-- 遮罩层 -->
+<div class="test"></div>
+<div class="masker"></div>
+<footer class="footer-menu"></footer>

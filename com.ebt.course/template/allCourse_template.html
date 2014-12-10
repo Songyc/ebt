@@ -1,0 +1,77 @@
+<script id="allCourse_template" type="text/x-underscore-template">
+<%
+    if(resultCode === 0 && typeof result !== "undefined" && result !== null && result !== "" && result.length !== 0) {
+  %>
+<div class="courseList">
+<!--每一年start-->
+<%_.each(result,function(everyYearItem,index){
+  %>
+  <div class="course_year" id=courseYear<%=index%>>
+    <p class="timeline bgone fs26"><%=everyYearItem.year%></p>
+    <!--一年里的所有课程start-->
+    <%_.each(everyYearItem.courses,function(courseItem,index){%>
+    <div class='bgone course_item courseItem<%=courseItem.courseId%>' data-value=<%=courseItem.courseId%>>
+    <!--用来删除按钮的遮罩层-->
+      <div class="course_item_masker"><img src="../base/img/del.ing" alt="" class="del_item"></div>
+        <div class="courseTitle c2 fs24 textL">
+       <!-- <%=courseItem.actype%>机型  -->
+        <%if(courseItem.courseName.length>32){%>
+          <%=courseItem.courseName.substring(0,30)%>...
+       <% }else{%>
+          <%=courseItem.courseName%> 
+       <% }%>
+        </div>
+
+<!--判断课程是否已经下载start-->
+<%var downloadStatusArr =  getLocalStorageKey("downloadStatusArr_");
+  var downloadStatusArr =  getLocalStorageValue(downloadStatusArr);
+  //console.error(downloadStatusArr);
+  if(_.contains(downloadStatusArr,String(courseItem.courseId))){%>
+
+    <div class="downloadCourse">
+        <div class="already downloadTip textC fs30"><%=lang.downloaded%></div>
+    </div>
+
+<%
+  }else{
+ %> 
+    <div class="downloadCourse">
+        <div class="downloadTip">
+            <img src="../base/img/download.ing" class="download">
+        </div>
+    </div>
+
+
+    <!--new start-->
+ <div class="newCourse">
+    <div class="new_bg">
+    <div class="new_replace"></div>
+    </div>
+    <div class="new c1 fs20">
+    NEW
+    </div>
+ </div>
+    <!--new end-->
+
+ <%  
+  }
+%>
+<!--判断课程是否已经下载end-->
+          <div class="course_item_bottom">
+              <div class="course_time_role fs24 c1 textE">
+                 <%=courseItem.courseYear%><%=courseItem.courseYearperiod%> | <%=courseItem.skilledLevel%>
+              </div>   
+
+             <img src="../base/img/courseTip.ing" alt="" class="tipPic"  data-value=<%=courseItem.courseId%>>
+
+          </div>
+
+    </div>
+    <%})%>
+    <!--一年里的所有课程end-->
+  </div>
+<%})%>
+<!--每一年end-->
+</div>
+<%}%>
+     </script>
